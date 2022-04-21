@@ -232,21 +232,21 @@
                         <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
 
                         <script>
-                        function runApp() {
-                            liff.getProfile().then(profile => {
-                                document.getElementById('line_userId').value = profile.userId;
-                                document.getElementById('displayName').value = profile.displayName;
-                            }).catch(err => console.error(err));
-                        }
-                        liff.init({ liffId: "1657073013-o0n3JVxL" }, () => {
-                            if (liff.isLoggedIn()) {
-                                runApp()
-                            } else {
-                                liff.login();
+                            function runApp() {
+                                liff.getProfile().then(profile => {
+                                    document.getElementById('line_userId').value = profile.userId;
+                                    document.getElementById('displayName').value = profile.displayName;
+                                }).catch(err => console.error(err));
                             }
-                        }, err => console.error(err.code, error.message));
+                            liff.init({ liffId: "1657073013-o0n3JVxL" }, () => {
+                                if (liff.isLoggedIn()) {
+                                    runApp()
+                                } else {
+                                    liff.login();
+                                }
+                            }, err => console.error(err.code, error.message));
 
-                    </script>
+                        </script>
 
                         <div class="col-12 p-1">
                             <button type="submit" class="btn btn-primary" type="button" id="submitButton">
@@ -276,6 +276,13 @@
 
                 </form>
             </div>
+
+            <audio src="https://pws.newton.ac.th/Futuristic/ang1.mp3" id="my_audio"></audio>
+            <script type="text/javascript">
+                window.onload = function () {
+                    document.getElementById("my_audio").play();
+                }
+            </script>
 
 
 
