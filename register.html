@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Angel Diet</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body {
+            /* background: linear-gradient(45deg, #7ed274 30%, #ffffff 100%) !important; */
+
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: bottom;
+            background-attachment: fixed;
+            font-family: 'Kanit', sans-serif;
+            margin-bottom: 5rem;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .card {
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        .Check-in {
+            font-size: 1.125rem;
+            color: #18ba8c;
+            margin-top: 10px;
+        }
+
+        .location {
+            font-size: 1.5rem;
+            color: #18ba8c;
+            margin-top: 0px;
+
+            font-weight: bold;
+        }
+
+        .location2 {
+            font-size: 1rem;
+            color: #18ba8c;
+            margin-top: 0px;
+            margin-top: 0rem;
+
+        }
+
+        .input-group-text {
+            color: #18ba8c !important;
+            background-color: #7dd27491 !important;
+            border: 1px solid #e5f6e3 !important;
+
+        }
+
+        .form-control {
+            margin-bottom: 2px;
+            color: #18ba8c;
+            background-color: #7ed27436 !important;
+            border: 1px solid #e5f6e3 !important;
+        }
+
+        .location3 {
+            font-size: .1rem;
+            color: #ffffff;
+            position: absolute;
+
+        }
+
+        .form-control {
+            margin-bottom: 5px;
+        }
+
+        .form-label {
+            margin-bottom: .1rem;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #18ba8c;
+            border-color: white;
+            height: 50px;
+            border-radius: 10px;
+            border: 1px solid #e5f6e3;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            width: 100%;
+
+        }
+
+        .btn-1:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .input-group {
+            margin-top: 5px;
+        }
+
+        .input-group-text {
+            display: flex;
+            margin-top: 5 px;
+            align-items: center;
+            padding: 0.375 rem 0.75 rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #e9ecef;
+            border: 1 px solid #ced4da;
+            border-radius: 0.25 rem;
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0rem;
+        }
+
+        .submit {
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <main>
+        <tr id='check1'>
+            <div class="px-4 py-3  text-center">
+
+                <img src="https://pws.newton.ac.th/Futuristic/ang%20logo%2001.png" alt="pic.png" width="120">
+                <!-- <h1 class="Check-in">Check-in</h1> -->
+                <p class="location">Angel Diet</p>
+                <p class="location2">BMI Calculator</p>
+                <!-- <p class="location2">ปรับพื้นฐาน / Summer Camp</p>
+                <p class="location">Angel Diet</p> -->
+
+                <!-- <p class="location5">check-in, check-out ของนักเรียน</p> -->
+            </div>
+
+
+            <div class="submit">
+
+                <form id="registerForm">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="inlineFormCustomSelectPref">กรุณากรอกข้อมูล</label>
+
+                        <input name="weight_kg" type="text" class="form-control" id="weight_kg"
+                            placeholder="น้ำหนัก (kg)" value="" required>
+
+                        <input name="height_m" type="text" class="form-control" id="height_m" placeholder="ส่วนสูง (m)"
+                            value="" required>
+
+                        <input name="user_ages" type="text" class="form-control" id="user_ages"
+                            placeholder="อายุ" value="" maxlength="1" minlength="100" required>
+
+                        <!-- <input name="student_school" type="text" class="form-control" id="student_school"
+                            placeholder="โรงเรียน" value="" required> -->
+
+                        <select name="user_gender" class="form-control" id="user_gender" maxlength="1" minlength="1">
+                            <option selected>-เลือกเพศ-</option>
+                            <option value="A">ชาย</option>
+                            <option value="B">หญิง</option>
+                         
+
+                        </select>
+
+
+
+
+
+
+
+
+
+
+                        <div class="mb-3">
+
+
+                            <input name="line_userId" style="display:none;" type="text" class="form-control"
+                                id="line_userId" placeholder="" value="" required readonly>
+                            <input name="displayName" style="display:none;" type="text" class="form-control"
+                                id="displayName" placeholder="" value="" required readonly>
+                        </div>
+
+                        <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
+
+                        <!-- <script>
+                        function runApp() {
+                            liff.getProfile().then(profile => {
+                                document.getElementById('line_userId').value = profile.userId;
+                                document.getElementById('displayName').value = profile.displayName;
+                            }).catch(err => console.error(err));
+                        }
+                        liff.init({ liffId: "1656999418-oj98ZrdK" }, () => {
+                            if (liff.isLoggedIn()) {
+                                runApp()
+                            } else {
+                                liff.login();
+                            }
+                        }, err => console.error(err.code, error.message));
+
+                    </script> -->
+
+                        <div class="col-12 p-1">
+                            <button type="submit" class="btn btn-primary" type="button" id="submitButton">
+                                <span id="buttonSpinner" class="spinner-border spinner-border-sm d-none" role="status"
+                                    aria-hidden="true"></span>
+                                <span id="buttonText">Register</span>
+                            </button>
+                        </div>
+                        <div class="col-12 p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </symbol>
+                            </svg>
+                            <div id="unknowError" class="alert alert-danger d-flex align-items-center d-none"
+                                role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                    aria-label="Danger:">
+                                    <use xlink:href="#exclamation-triangle-fill" />
+                                </svg>
+                                <div>
+                                    กรุณาลองใหม่อีกครั้ง
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                </form>
+            </div>
+
+
+
+
+
+        </tr>
+    </main>
+    <script src="https://pws.newton.ac.th/The-Essence-camp/register.js"></script>
+</body>
+
+</html>
