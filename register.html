@@ -70,10 +70,12 @@
         }
 
         .form-control {
-            margin-bottom: 2px;
+            margin-bottom: 5px !important;
             color: #18ba8c;
-            background-color: #7ed27436 !important;
-            border: 1px solid #e5f6e3 !important;
+            background-color: #ffffff !important;
+            border: 5px solid #ffffff87 !important;
+            border-radius: 15px !important;
+            height: 50px !important;
         }
 
         .location3 {
@@ -85,24 +87,30 @@
 
         .form-control {
             margin-bottom: 5px;
+
+
+
         }
 
         .form-label {
-            margin-bottom: .1rem;
-            font-weight: bold;
+            margin-bottom: .5rem;
+            /* font-weight: bold; */
+            padding-left: 10px;
+            color: white;
         }
 
         .btn-primary {
             color: #fff;
-            background-color: #18ba8c;
+            background-color: #2dbb8b;
             border-color: white;
             height: 50px;
             border-radius: 10px;
-            border: 1px solid #e5f6e3;
+            border: 5px solid #ffffffcf !important;
             display: inline-block;
             cursor: pointer;
             text-decoration: none;
             width: 100%;
+            border-radius: 20px !important;
 
         }
 
@@ -129,6 +137,15 @@
             background-color: #e9ecef;
             border: 1 px solid #ced4da;
             border-radius: 0.25 rem;
+        }
+
+        .mb-3 {
+            border: 1px solid #e5f6e3;
+            padding: 10px;
+            margin-bottom: 1rem !important;
+            background: linear-gradient(45deg, #7ed274 30%, #18ba8c 100%) !important;
+            border-radius: 20px !important;
+
         }
 
         p {
@@ -160,7 +177,7 @@
                 <img src="https://pws.newton.ac.th/Futuristic/ang%20logo%2001.png" alt="pic.png" width="120">
                 <!-- <h1 class="Check-in">Check-in</h1> -->
                 <p class="location">Angel Diet</p>
-                <p class="location2">BMI Calculator</p>
+                <p class="location2">BMI & BMR Calculator</p>
                 <!-- <p class="location2">ปรับพื้นฐาน / Summer Camp</p>
                 <p class="location">Angel Diet</p> -->
 
@@ -175,28 +192,40 @@
                     <div class="mb-3">
                         <label class="form-label" for="inlineFormCustomSelectPref">กรุณากรอกข้อมูล</label>
 
-                        <input name="weight_kg" type="number" class="form-control" id="weight_kg"
-                            placeholder="น้ำหนัก (kg)" value="" maxlength="3" minlength="2" required>
+                        <input name="weight_kg" type="text" oninput="numberOnly(this.id);" class="form-control"
+                            id="weight_kg" placeholder="Weight / น้ำหนัก (kg)" value="" maxlength="3" minlength="2"
+                            required>
 
-                        <input name="height_m" type="number" class="form-control" id="height_m" placeholder="ส่วนสูง (m)"
-                            value="" maxlength="3" minlength="2" required>
+                        <input name="height_m" type="text" oninput="numberOnly(this.id);" class="form-control"
+                            id="height_m" placeholder="Height / ส่วนสูง (m)" value="" maxlength="3" minlength="2"
+                            required>
 
-                        <input name="user_ages" type="number" class="form-control" id="user_ages"
-                            placeholder="อายุ" value="" maxlength="3" minlength="1" required>
+                        <input name="user_ages" type="text" oninput="numberOnly(this.id);" class="form-control"
+                            id="user_ages" placeholder="Ages / อายุ" value="" maxlength="3" minlength="1" required>
+
+                        <script>
+                            function numberOnly(id) {
+                                // Get element by id which passed as parameter within HTML element event
+                                var element = document.getElementById(id);
+                                // This removes any other character but numbers as entered by user
+                                element.value = element.value.replace(/[^0-9]/gi, "");
+                            }
+                        </script>
 
                         <!-- <input name="student_school" type="text" class="form-control" id="student_school"
                             placeholder="โรงเรียน" value="" required> -->
 
                         <select name="user_gender" class="form-control" id="user_gender" maxlength="1" minlength="1">
-                            <option selected>-เลือกเพศ-</option>
+                            <option selected>-Gender / เลือกเพศ-</option>
                             <option value="A">ชาย</option>
                             <option value="B">หญิง</option>
                         </select>
 
-                        <div class="mb-3">
-                            <input name="line_userId"  style="display:none;" type="text" class="form-control"
+                        <div class="mb-4">
+                            <input name="line_userId" style="display:none;" type="text" class="form-control"
                                 id="line_userId" placeholder="" value="" required readonly>
-                            <input name="displayName"  style="display:none;" type="text" class="form-control"
+
+                            <input name="displayName" style="display:none;" type="text" class="form-control"
                                 id="displayName" placeholder="" value="" required readonly>
                         </div>
 
@@ -223,7 +252,7 @@
                             <button type="submit" class="btn btn-primary" type="button" id="submitButton">
                                 <span id="buttonSpinner" class="spinner-border spinner-border-sm d-none" role="status"
                                     aria-hidden="true"></span>
-                                <span id="buttonText">Register</span>
+                                <span id="buttonText">Calculate / คำนวณ</span>
                             </button>
                         </div>
                         <div class="col-12 p-1">
