@@ -175,13 +175,13 @@
                     <div class="mb-3">
                         <label class="form-label" for="inlineFormCustomSelectPref">กรุณากรอกข้อมูล</label>
 
-                        <input name="weight_kg" type="text" class="form-control" id="weight_kg"
-                            placeholder="น้ำหนัก (kg)" value="" required>
+                        <input name="weight_kg" type="number" class="form-control" id="weight_kg"
+                            placeholder="น้ำหนัก (kg)" value="" maxlength="3" minlength="2"required>
 
-                        <input name="height_m" type="text" class="form-control" id="height_m" placeholder="ส่วนสูง (m)"
-                            value="" required>
+                        <input name="height_m" type="number" class="form-control" id="height_m" placeholder="ส่วนสูง (m)"
+                            value="" maxlength="3" minlength="2"required>
 
-                        <input name="user_ages" type="text" class="form-control" id="user_ages"
+                        <input name="user_ages" type="number" class="form-control" id="user_ages"
                             placeholder="อายุ" value="" maxlength="3" minlength="1" required>
 
                         <!-- <input name="student_school" type="text" class="form-control" id="student_school"
