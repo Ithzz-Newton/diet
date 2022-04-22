@@ -1077,12 +1077,12 @@
                         </div>
 
 
-                        <label class="form-label" id="noon_food_title" 
+                        <label class="form-label" id="noon_food_title" style="display:none;"
                             for="inlineFormCustomSelectPref">มื้อกลางวันของคุณ</label>
 
                         <div class="input-group">
 
-                            <input class="form-control" type="text"  placeholder="-เลือกเมนูหลัก-"
+                            <input class="form-control" type="text" style="display:none;" placeholder="-เลือกเมนูหลัก-"
                                 onchange="opendiv2(this.value)" name="noon_food" id="noon_food" list="morning_food_list">
                             <!-- <datalist id="noon_food_list">
                                 <option value="Boston">
@@ -1091,14 +1091,14 @@
                             <div class="col-4">
 
                                 <input name="noon_food_u" type="text" oninput="numberOnly(this.id);"
-                                    class="form-control" id="noon_food_u" 
+                                    class="form-control" id="noon_food_u" style="display:none;"
                                     placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
                             </div>
                         </div>
 
                         <div class="input-group">
 
-                            <input class="form-control" type="text" 
+                            <input class="form-control" type="text" style="display:none;"
                                 placeholder="-เลือกเมนูทานเล่น-" onchange="opendiv2(this.value)" name="noon_fruit"
                                 id="noon_fruit" list="morning_fruit_list">
                             <!-- <datalist id="noon_fruit_list">
@@ -1107,14 +1107,14 @@
                             </datalist> -->
                             <div class="col-4">
                                 <input name="noon_fruit_u" type="text" oninput="numberOnly(this.id);"
-                                    class="form-control" id="noon_fruit_u" 
+                                    class="form-control" id="noon_fruit_u" style="display:none;"
                                     placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
                             </div>
                         </div>
 
                         <div class="input-group">
 
-                            <input class="form-control" type="text" 
+                            <input class="form-control" type="text" style="display:none;"
                                 placeholder="-เลือกเมนูเครื่องดื่ม-" onchange="opendiv2(this.value)" name="noon_bev"
                                 id="noon_bev" list="morning_bev_list">
                             <!-- <datalist id="noon_bev_list">
@@ -1124,17 +1124,17 @@
                             <div class="col-4">
 
                                 <input name="noon_bev_u" type="text" oninput="numberOnly(this.id);" class="form-control"
-                                    id="noon_bev_u"  placeholder="ยูนิต/จำนวน" value=""
+                                    id="noon_bev_u" style="display:none;" placeholder="ยูนิต/จำนวน" value=""
                                     maxlength="3" minlength="2" required>
                             </div>
                         </div>
 
                         <label class="form-label" id="night_food_title" onchange="opendiv3(this.value)"
-                             for="inlineFormCustomSelectPref">มื้อเย็นของคุณ</label>
+                            style="display:none;" for="inlineFormCustomSelectPref">มื้อเย็นของคุณ</label>
 
                         <div class="input-group">
 
-                            <input class="form-control" type="text"  placeholder="-เลือกเมนูหลัก-"
+                            <input class="form-control" type="text" style="display:none;" placeholder="-เลือกเมนูหลัก-"
                                 name="night_food" id="night_food" list="morning_food_list">
                             <!-- <datalist id="night_food_list">
                                 <option value="Boston">
@@ -1143,14 +1143,14 @@
                             <div class="col-4">
 
                                 <input name="night_food_u" type="text" oninput="numberOnly(this.id);"
-                                    class="form-control" id="night_food_u" 
+                                    class="form-control" id="night_food_u" style="display:none;"
                                     placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
                             </div>
                         </div>
 
                         <div class="input-group">
 
-                            <input class="form-control" type="text" 
+                            <input class="form-control" type="text" style="display:none;"
                                 placeholder="-เลือกเมนูทานเล่น-" name="night_fruit" id="night_fruit"
                                 list="morning_fruit_list">
 
@@ -1161,14 +1161,14 @@
                             <div class="col-4">
 
                                 <input name="night_fruit_u" type="text" oninput="numberOnly(this.id);"
-                                    class="form-control" id="night_fruit_u" 
+                                    class="form-control" id="night_fruit_u" style="display:none;"
                                     placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
                             </div>
                         </div>
 
                         <div class="input-group">
 
-                            <input class="form-control" type="text" 
+                            <input class="form-control" type="text" style="display:none;"
                                 placeholder="-เลือกเมนูเครื่องดื่ม-" name="night_bev" id="night_bev"
                                 list="morning_bev_list">
                             <!-- <datalist id="night_bev_list">
@@ -1178,7 +1178,7 @@
                             <div class="col-4">
 
                                 <input name="night_bev_u" type="text" oninput="numberOnly(this.id);"
-                                    class="form-control" id="night_bev_u" 
+                                    class="form-control" id="night_bev_u" style="display:none;"
                                     placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
                             </div>
                         </div>
@@ -1242,10 +1242,10 @@
 
 
                         <div class="mb-4">
-                            <input name="line_userId"  type="text" class="form-control"
+                            <input name="line_userId" style="display:none;" type="text" class="form-control"
                                 id="line_userId" placeholder="" value="" required readonly>
 
-                            <input name="displayName"  type="text" class="form-control"
+                            <input name="displayName" style="display:none;" type="text" class="form-control"
                                 id="displayName" placeholder="" value="" required readonly>
                         </div>
 
