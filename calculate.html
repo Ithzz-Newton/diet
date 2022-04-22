@@ -602,8 +602,7 @@
                         <div class="input-group">
 
                             <input class="form-control" type="text" placeholder="-เลือกเมนูทานเล่น-"
-                                onchange="opendiv1(this.value)" name="morning_fruit" id="morning_fruit"
-                                list="morning_fruit_list">
+                                name="morning_fruit" id="morning_fruit" list="morning_fruit_list">
                             <datalist id="morning_fruit_list">
 
                                 <option value="ไม่ได้ทาน"></option>
@@ -929,8 +928,7 @@
                         <div class="input-group">
 
                             <input class="form-control" type="text" placeholder="-เลือกเมนูเครื่องดื่ม-"
-                                onchange="opendiv1(this.value)" name="morning_bev" id="morning_bev"
-                                list="morning_bev_list">
+                                name="morning_bev" id="morning_bev" list="morning_bev_list">
                             <datalist id="morning_bev_list">
                                 <option value="ไม่ได้ดื่ม"></option>
                                 <option value="กาแฟร้อน 1 แก้ว"></option>
@@ -1110,8 +1108,8 @@
                         <div class="input-group">
 
                             <input class="form-control" type="text" style="display:none;"
-                                placeholder="-เลือกเมนูทานเล่น-" onchange="opendiv2(this.value)" name="noon_fruit"
-                                id="noon_fruit" list="morning_fruit_list">
+                                placeholder="-เลือกเมนูทานเล่น-" name="noon_fruit" id="noon_fruit"
+                                list="morning_fruit_list">
                             <!-- <datalist id="noon_fruit_list">
                                 <option value="Boston">
                                 <option value="Cambridge">
@@ -1126,22 +1124,22 @@
                         <div class="input-group">
 
                             <input class="form-control" type="text" style="display:none;"
-                                placeholder="-เลือกเมนูเครื่องดื่ม-" onchange="opendiv2(this.value)" name="noon_bev"
-                                id="noon_bev" list="morning_bev_list">
+                                placeholder="-เลือกเมนูเครื่องดื่ม-" name="noon_bev" id="noon_bev"
+                                list="morning_bev_list">
                             <!-- <datalist id="noon_bev_list">
                                 <option value="Boston">
                                 <option value="Cambridge">
                             </datalist> -->
                             <div class="col-4">
 
-                                <input name="noon_bev_u" type="text" oninput="numberOnly(this.id);" class="form-control"
-                                    id="noon_bev_u" style="display:none;" placeholder="ยูนิต/จำนวน" value=""
-                                    maxlength="3" minlength="2" required>
+                                <input name="noon_bev_u" type="text" class="form-control" id="noon_bev_u"
+                                    style="display:none;" placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2"
+                                    required>
                             </div>
                         </div>
 
-                        <label class="form-label" id="night_food_title" onchange="opendiv3(this.value)"
-                            style="display:none;" for="inlineFormCustomSelectPref">มื้อเย็นของคุณ</label>
+                        <label class="form-label" id="night_food_title" style="display:none;"
+                            for="inlineFormCustomSelectPref">มื้อเย็นของคุณ</label>
 
                         <div class="input-group">
 
