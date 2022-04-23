@@ -1,39 +1,1341 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-  <meta name="generator" content="Hugo 0.84.0">
-  <title>Angel Diet</title>
-  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Angel Diet</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/heroes/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        body {
+            /* background: linear-gradient(45deg, #7ed274 30%, #ffffff 100%) !important; */
+
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: bottom;
+            background-attachment: fixed;
+            font-family: 'Kanit', sans-serif;
+            margin-bottom: 5rem;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        .card {
+            margin-left: 10px;
+            margin-right: 10px;
+            border-radius: 20px;
+        }
+
+        .Check-in {
+            font-size: 1.125rem;
+            color: #18ba8c;
+            margin-top: 10px;
+        }
+
+        .location {
+            font-size: 1.5rem;
+            color: #18ba8c;
+            margin-top: 0px;
+
+            font-weight: bold;
+        }
+
+        .location2 {
+            font-size: 1rem;
+            color: #18ba8c;
+            margin-top: 0px;
+            margin-top: 0rem;
+
+        }
+
+        .input-group-text {
+            color: #18ba8c !important;
+            background-color: #7dd27491 !important;
+            border: 1px solid #e5f6e3 !important;
+
+        }
+
+        .form-control {
+            margin-bottom: 5px !important;
+            color: #18ba8c;
+            background-color: #ffffff !important;
+            border: 5px solid #ffffff87 !important;
+            border-radius: 15px !important;
+            height: 50px !important;
+        }
+
+        .location3 {
+            font-size: .1rem;
+            color: #ffffff;
+            position: absolute;
+
+        }
+
+        .form-control {
+            margin-bottom: 5px;
+
+
+
+        }
+
+        .form-label {
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+            /* font-weight: bold; */
+            padding-left: 10px;
+            color: white;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #2dbb8b;
+            border-color: white;
+            height: 50px;
+            border-radius: 10px;
+            border: 5px solid #ffffffcf !important;
+            display: inline-block;
+            cursor: pointer;
+            text-decoration: none;
+            width: 100%;
+            border-radius: 20px !important;
+
+        }
+
+        .btn-1:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .input-group {
+            margin-top: 5px;
+        }
+
+        .input-group-text {
+            display: flex;
+            margin-top: 5 px;
+            align-items: center;
+            padding: 0.375 rem 0.75 rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: center;
+            white-space: nowrap;
+            background-color: #e9ecef;
+            border: 1 px solid #ced4da;
+            border-radius: 0.25 rem;
+        }
+
+        .mb-3 {
+            border: 1px solid #e5f6e3;
+            padding: 10px;
+            margin-bottom: 1rem !important;
+            background: linear-gradient(45deg, #7ed2749e 30%, #18ba8c91 100%) !important;
+            border-radius: 20px !important;
+
+        }
+
+        p {
+            margin-top: 0;
+            margin-bottom: 0rem;
+        }
+
+        .submit {
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
 
 </head>
+<audio src="https://pws.newton.ac.th/Futuristic/ang2.mp3" id="my_audio"></audio>
+<script>
+    function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        window.open("https://ithzz-newton.github.io/diet/calculate.html");
+    }
+
+    // iOS detection from: http://stackoverflow.com/a/9039885/177710
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+</script>
+<script type="text/javascript">
+    window.onload = function () {
+        document.getElementById("my_audio").play();
+    }
+</script>
+<script>
+    function numberOnly(id) {
+        // Get element by id which passed as parameter within HTML element event
+        var element = document.getElementById(id);
+        // This removes any other character but numbers as entered by user
+        element.value = element.value.replace(/[^0-9]/gi, "");
+    }
+</script>
 
 <body>
+    <main>
+        <tr id='check1'>
+            <div class="px-4 py-3  text-center">
 
-  <input list="browsers" autocomplete="off">
+                <!-- <img src="https://pws.newton.ac.th/Futuristic/ang%20logo%2001.png" alt="pic.png" width="120"> -->
+                <!-- <h1 class="Check-in">Check-in</h1> -->
+                <p class="location">Angel Diet</p>
+                <p class="location2">คำนวณปริมาณแคลอรี่ที่คุณได้รับต่อวัน</p>
+                <!-- <p class="location2">ปรับพื้นฐาน / Summer Camp</p>
+                <p class="location">Angel Diet</p> -->
 
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
+                <!-- <p class="location5">check-in, check-out ของนักเรียน</p> -->
+            </div>
 
-  <br><br><br>
 
-  <input list="browsers" autocomplete="off">
+            <div class="submit">
 
-  <datalist id="browsers">
-    <option value="Internet Explorer">
-    <option value="Firefox">
-    <option value="Chrome">
-    <option value="Opera">
-    <option value="Safari">
-  </datalist>
+                <form id="registerForm">
+
+                    <div class="mb-3">
+                        <label class="form-label" for="inlineFormCustomSelectPref">มื้อเช้าของคุณ</label>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" placeholder="-เลือกเมนูหลัก-"
+                                onchange="opendiv1(this.value)" name="morning_food" id="morning_food"
+                                list="morning_food_list">
+                            <datalist id="morning_food_list">
+                                <option value="ไม่ได้ทาน"></option>
+                                <option value="กระจับต้ม 70 กรัม"></option>
+                                <option value="กระเพาะปลา 1 ชาม"></option>
+                                <option value="กระเพาะปลาตุ๋นน้ำแดง 1 ถ้วย"></option>
+                                <option value="กุนเชียงทอด 1 คู่เล็ก"></option>
+                                <option value="กุ้งทอดกระเทียมพริกไทย 3 ตัวกลาง"></option>
+                                <option value="กุ้งนางนึ่งนมสด 1 ถ้วย"></option>
+                                <option value="กุ้งผัดพริกอ่อน 1 จาน"></option>
+                                <option value="กุ้งอบวุ้นเส้น 1 จาน"></option>
+                                <option value="ก๋วยจั๊บ 1 ชาม"></option>
+                                <option value="ก๋วยจั๊บญวณ 1 ถ้วย"></option>
+                                <option value="ก๋วยเตี๋ยวคั่วไก่ 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวต้มยำกุ้ง 1 ถ้วย"></option>
+                                <option value="ก๋วยเตี๋ยวผัดกระเพราไก่ 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวผัดไทยกุ้งสดใส่ไข่ 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวราดหน้าปลากระพง 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวหลอด 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวเนื้อสับ 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวเนื้อเรียง 1 ถ้วย"></option>
+                                <option value="ก๋วยเตี๋ยวเรือน้ำตกน้ำ 1 ถ้วย"></option>
+                                <option value="ก๋วยเตี๋ยวเรือน้ำตกแห้ง 1 ถ้วย"></option>
+                                <option value="ก๋วยเตี๋ยวเส้นปลา น้ำ 1 ชาม"></option>
+                                <option value="ก๋วยเตี๋ยวเส้นปลา แห้ง 1 ชาม"></option>
+                                <option value="ก๋วยเตี๋ยวเส้นเล็กต้มยำหมู 1 ชาม"></option>
+                                <option value="ก๋วยเตี๋ยวเส้นเล็กหมูแห้ง 1 ชาม"></option>
+                                <option value="ก๋วยเตี๋ยวเส้นใหญ่ผัดซีอิ๊วใส่ไข่ 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวเส้นใหญ่ราดหน้าหมู 1 จาน"></option>
+                                <option value="ก๋วยเตี๋ยวแขก 1 ถ้วย"></option>
+                                <option value="ขนมจีน (50 กรัม) 1 จับ"></option>
+                                <option value="ขนมจีน 2 ทัพพี"></option>
+                                <option value="ขนมจีนซาวน้ำ 1 จาน"></option>
+                                <option value="ขนมจีนน้ำพริก 1 จาน"></option>
+                                <option value="ขนมจีนน้ำยา 1 จาน"></option>
+                                <option value="ขนมจีนน้ำเงี้ยว 1 ถ้วย"></option>
+                                <option value="ข้าว สตูว์ไก่ 1 จาน"></option>
+                                <option value="ข้าวกุ้งทอดกระเทียมพริกไทย 1 จาน"></option>
+                                <option value="ข้าวขาหมู 1 จาน"></option>
+                                <option value="ข้าวคลุกกะปิ 1 จาน"></option>
+                                <option value="ข้าวซอยไก่, หมู 1 ถ้วย"></option>
+                                <option value="ข้าวญี่ปุ่น 3 ช้อนโต๊ะ 70 กรัม 1 ทัพพี"></option>
+                                <option value="ข้าวตังหน้าตั้ง 3 ชิ้น"></option>
+                                <option value="ข้าวตังหมูหยอง 2 แผ่น"></option>
+                                <option value="ข้าวต้ม(ข้าวกล้อง) 1 ถ้วย"></option>
+                                <option value="ข้าวต้ม(ข้าวขาว) 1 ถ้วย"></option>
+                                <option value="ข้าวต้มมัด 1 มัด"></option>
+                                <option value="ข้าวปุ้น (ส้มตำ - ขนมจีน) 1 จาน"></option>
+                                <option value="ข้าวผัดกระเพรากุ้ง 1 จาน"></option>
+                                <option value="ข้าวผัดกระเพราหมู 1 จาน"></option>
+                                <option value="ข้าวผัดกระเพราไก่ไข่ดาว 1 จาน"></option>
+                                <option value="ข้าวผัดกุนเชียง 1 จาน"></option>
+                                <option value="ข้าวผัดกุ้งใส่ไข่ 1 จาน"></option>
+                                <option value="ข้าวผัดคะน้าหมูกรอบ 1 จาน"></option>
+                                <option value="ข้าวผัดต้มยำทะเลแห้ง 1 จาน"></option>
+                                <option value="ข้าวผัดน้ำพริกกุ้งสด 1 จาน"></option>
+                                <option value="ข้าวผัดน้ำพริกลงเรือ 1 จาน"></option>
+                                <option value="ข้าวผัดปลาหมึกน้ำพริกเผา 1 จาน"></option>
+                                <option value="ข้าวผัดปลาเค็ม 1 จาน"></option>
+                                <option value="ข้าวผัดปูใส่ไข่ 1 จาน"></option>
+                                <option value="ข้าวผัดผักกระเฉดหมูกรอบ 1 จาน"></option>
+                                <option value="ข้าวผัดมันกุ้งใส่ไข่ 1 จาน"></option>
+                                <option value="ข้าวผัดสับปะรด 1 จาน"></option>
+                                <option value="ข้าวผัดหนำเลียบ-หมู-ไข่ 1 จาน"></option>
+                                <option value="ข้าวผัดหมูน้ำพริกเผา 1 จาน"></option>
+                                <option value="ข้าวผัดหมูใส่ไข่ 1 จาน"></option>
+                                <option value="ข้าวผัดอเมริกัน 1 จาน"></option>
+                                <option value="ข้าวผัดแกงเขียวหวานไก่ 1 จาน"></option>
+                                <option value="ข้าวผัดแหนม 1 จาน"></option>
+                                <option value="ข้าวผัดไส้กรอก 1 จาน"></option>
+                                <option value="ข้าวมันส้มตำ เนื้อผัดหวาน 1 จาน"></option>
+                                <option value="ข้าวมันไก่ 1 จาน"></option>
+                                <option value="ข้าวมันไก่ทอด 1 จาน"></option>
+                                <option value="ข้าวยำปักษ์ใต้ 1 จาน"></option>
+                                <option value="ข้าวราดหน้าไก่ 1 จาน"></option>
+                                <option value="ข้าวสวย(ข้าวกล้อง) 3 ทัพพี"></option>
+                                <option value="ข้าวสวย(ข้าวขาว) 3 ทัพพี"></option>
+                                <option value="ข้าวหน้ากุ้งผัดพริดสด 1 จาน"></option>
+                                <option value="ข้าวหน้าเป็ด 1 จาน"></option>
+                                <option value="ข้าวหมกไก่ 1 จาน"></option>
+                                <option value="ข้าวหมูกระเทียม 1 จาน"></option>
+                                <option value="ข้าวหมูแดง 1 จาน"></option>
+                                <option value="ข้าวอบเผือก 1 จาน"></option>
+                                <option value="ข้าวเหนียวหน้ากุ้ง 1 ห่อ"></option>
+                                <option value="ข้าวเหนียวหมูทอด 1 ชุด"></option>
+                                <option value="ข้าวเหนียวหมูสวรรค์ 1 ชุด"></option>
+                                <option value="ข้าวไก่อบ 1 จาน"></option>
+                                <option value="ข้าวไข่เจียว 1 จาน"></option>
+                                <option value="ครีมซุปไก่ 1 ถ้วย"></option>
+                                <option value="คอร์นเฟลค 1 ถ้วยตวง"></option>
+                                <option value="คอหมูย่าง 1 จาน"></option>
+                                <option value="คะน้าหมูกรอบ 1 จาน"></option>
+                                <option value="ซุปข้าวโพด 1 ถ้วย"></option>
+                                <option value="ซุปหน่อไม้ 1 จาน"></option>
+                                <option value="ซุปใส (ผัก) 1 ถ้วย"></option>
+                                <option value="ตับไก่ปิ้ง 1 ไม้"></option>
+                                <option value="ต้มกะทิสายบัว ปลาทูนึ่ง 1 ถ้วย"></option>
+                                <option value="ต้มข่าไก่ 1 ถ้วย"></option>
+                                <option value="ต้มจับฉ่าย 1 ถ้วย"></option>
+                                <option value="ต้มตือฮวน 1 ถ้วย"></option>
+                                <option value="ต้มผักกาดดอง ซี่โครงหมู 1 ถ้วย"></option>
+                                <option value="ต้มยำกุ้ง 1 ถ้วย"></option>
+                                <option value="ต้มยำปลากระป๋อง 1 ถ้วย"></option>
+                                <option value="ต้มยำปลากระพง 1 ถ้วย"></option>
+                                <option value="ต้มยำเห็ดสด 1 ถ้วย"></option>
+                                <option value="ต้มยำไก่-ใส่เห็ด 1 ถ้วย"></option>
+                                <option value="ต้มส้มปลาทู 1 ถ้วย"></option>
+                                <option value="ต้มหัวผักกาดขาว ซี่โครงหมู 1 ถ้วย"></option>
+                                <option value="ต้มเลือดหมู"></option>
+                                <option value="ต้มโคล้งปลากรอบ 1 ถ้วย"></option>
+                                <option value="ต้มโคล้งไก่ย่าง 1 ถ้วย"></option>
+                                <option value="ทอดมันกุ้ง 1 จาน"></option>
+                                <option value="ทอดมันปลากราย 1 ชิ้น"></option>
+                                <option value="น้ำตาลทราย 1 ช้อนชา"></option>
+                                <option value="น้ำพริกกะปิผักสด 2 ช้อนโต๊ะ"></option>
+                                <option value="น้ำพริกปลาป่น 1 ถ้วย"></option>
+                                <option value="น้ำพริกมะขามสด 1 ถ้วย"></option>
+                                <option value="น้ำพริกมะขามเปียก 1 ถ้วย"></option>
+                                <option value="น้ำพริกมะม่วง 1 ถ้วย"></option>
+                                <option value="น้ำพริกลงเรือ 1 ถ้วย"></option>
+                                <option value="น้ำพริกหนุ่ม 2 ช้อนโต๊ะ"></option>
+                                <option value="น้ำพริกอ่อง 2 ช้อนโต๊ะ"></option>
+                                <option value="บะหมี่กรอบราดหน้า 1 จาน"></option>
+                                <option value="บะหมี่กรอบราดหน้า รวมมิตร 1 จาน"></option>
+                                <option value="บะหมี่กรอบราดหน้า ไก่ หน่อไม้ 1 จาน"></option>
+                                <option value="บะหมี่กึ่งสำเร็จรูปผัดกระเพราหมู 1 จาน"></option>
+                                <option value="บะหมี่กึ่งสำเร็จรูปผัดขี้เมา 1 จาน"></option>
+                                <option value="บะหมี่น่องไก่-น้ำ 1 ชาม"></option>
+                                <option value="บะหมี่น้ำต้มยำ หมู 1 ถ้วย"></option>
+                                <option value="บะหมี่เกี๊ยวหมูแดง-น้ำ 1 ชาม"></option>
+                                <option value="บะหมี่เกี๊ยวเป็ดย่าง 1 ถ้วย"></option>
+                                <option value="บะหมี่เป็ดน้ำ 1 ถ้วย"></option>
+                                <option value="บะหมี่แห้ง หมูแดง 1 จาน"></option>
+                                <option value="บาร์บีคิวซี่โครงหมู ข้าวคลุกเนย 1 ชุด"></option>
+                                <option value="ปลากระพงนึ่งมะนาว 1 ชิ้นกลาง"></option>
+                                <option value="ปลาชุบขนมปังทอด สลัดผัก 1 จาน"></option>
+                                <option value="ปลาช่อนอบเกลือ 1 ตัว"></option>
+                                <option value="ปลาซาบะย่าง 1 ตัว"></option>
+                                <option value="ปลาดุกย่าง น้ำปลามะนาว 1 ตัวเล็ก"></option>
+                                <option value="ปลาทอดสามรส 1 ตัวกลาง"></option>
+                                <option value="ปลาทูทอด 1 ตัวกลาง"></option>
+                                <option value="ปลาราดซอสมะนาว มันฝรั่งทอด 1 จาน"></option>
+                                <option value="ปลาราดพริก 1 จาน"></option>
+                                <option value="ปลาร้าทรงเครื่อง 1 ถ้วย"></option>
+                                <option value="ปลาร้าสับ 1 ถ้วย"></option>
+                                <option value="ปลาสลิดทอด 1 ตัว"></option>
+                                <option value="ปลาสำลีแดดเดียว ยำมะม่วง ครึ่งตัวเล็ก"></option>
+                                <option value="ปลาหมึกนึ่งมะนาว 1 ตัว"></option>
+                                <option value="ปลาหมึกผัดฉ่า 1 ถ้วย"></option>
+                                <option value="ปลาอินทรีย์เค็มทอด 1 จาน"></option>
+                                <option value="ปลาเล็กปลาน้อยทอดกรอบ 1 ช้อนโต๊ะ"></option>
+                                <option value="ปลาแซลมอนย่าง 1 จาน"></option>
+                                <option value="ปอเปี๊ยะทอด 2 ชิ้น"></option>
+                                <option value="ปอเปี๊ยะสด 1 ชิ้น"></option>
+                                <option value="ปาท่องโก๋ 1 คู่กลาง"></option>
+                                <option value="ปีกไก่สอดไส้ทอด 3 ชุด"></option>
+                                <option value="ผัดกะหล่ำปลี หมู กุ้ง 1 จาน"></option>
+                                <option value="ผัดคะน้าปลาเค็ม 1 จาน"></option>
+                                <option value="ผัดดอกกะหล่ำกับกุ้ง 1 จาน"></option>
+                                <option value="ผัดดอกกุ่ยช่ายกับตับ 1 จาน"></option>
+                                <option value="ผัดถั่วงอกกับเต้าหู้ 1 จาน"></option>
+                                <option value="ผัดถั่วลันเตากับกุ้ง 1 จาน"></option>
+                                <option value="ผัดบร็อกโคลี่กับกุ้ง 1 จาน"></option>
+                                <option value="ผัดบวบใส่ไข่ 1 จาน"></option>
+                                <option value="ผัดผักกระเฉดน้ำมันหอย 1 จาน"></option>
+                                <option value="ผัดผักกาดขาวหมู วุ้นเส้น 1 จาน"></option>
+                                <option value="ผัดผักกาดดองใส่ไข่ 1 จาน"></option>
+                                <option value="ผัดผักบุ้งไฟแดง 1 จาน"></option>
+                                <option value="ผัดผักรวมกับหมู 1 จาน"></option>
+                                <option value="ผัดพริกขิงกุ้งกับถั่วฝักยาว 1 ถ้วย"></option>
+                                <option value="ผัดพริกขิงหมูกับถั่วฝักยาว 1 จาน"></option>
+                                <option value="ผัดพริกแกงหมูกับหน่อไม้ 1 ถ้วย"></option>
+                                <option value="ผัดฟักทองใส่ไข่ 1 จาน"></option>
+                                <option value="ผัดมะเขือยาวหมูสับ 1 จาน"></option>
+                                <option value="ผัดยอดมะระน้ำมันหอย 1 จาน"></option>
+                                <option value="ผัดวุ้นเส้นใส่ไข่ 1 จาน"></option>
+                                <option value="ผัดสะตอกับหมู กุ้ง 1 จาน"></option>
+                                <option value="ผัดหน่อไม้กับไข่ 1 จาน"></option>
+                                <option value="ผัดหน่อไม้ฝรั่งกับกุ้ง 1 จาน"></option>
+                                <option value="ผัดเปรี้ยวหวานไก่ 1 จาน"></option>
+                                <option value="ผัดเผ็ดปลาดุก 1 ถ้วย"></option>
+                                <option value="ผัดเผ็ดปลาทอดกรอบ 1 ถ้วย"></option>
+                                <option value="ผัดเผ็ดหมูกับมะเขือ 1 จาน"></option>
+                                <option value="ผัดไชโป๊วใส่ไข่ 1 จาน"></option>
+                                <option value="ผัดไทยไข่ห่อ 1 จาน"></option>
+                                <option value="ผัดไทยไร้เส้น 1 จาน"></option>
+                                <option value="ฟักตุ๋นไก่มะนาวดอง 1 ถ้วย"></option>
+                                <option value="ฟักทองนึ่งโรยมะพร้าว 1 จานเล็ก"></option>
+                                <option value="มักกะโรนีขี้เมาไก่ 1 จาน"></option>
+                                <option value="มักกะโรนีผัดกุ้ง 1 จาน"></option>
+                                <option value="มาการีน 1 ช้อนชา"></option>
+                                <option value="ยากิโซบะ 1 จาน"></option>
+                                <option value="ยำกุนเชียง 1 จาน"></option>
+                                <option value="ยำขนมจีน 1 จาน"></option>
+                                <option value="ยำถั่วพู 1 จาน"></option>
+                                <option value="ยำบะหมี่กึ่งสำเร็จรูป 1 จาน"></option>
+                                <option value="ยำปลากระป๋อง 1 ถ้วย"></option>
+                                <option value="ยำปลาดุกฟู 1 จาน"></option>
+                                <option value="ยำผักกะเฉด 1 จาน"></option>
+                                <option value="ยำผักกาดดอง"></option>
+                                <option value="ยำผักบุ้งทอดกรอบ 1 จาน"></option>
+                                <option value="ยำมะเขือยาว 1 จาน"></option>
+                                <option value="ยำรวมมิตรทะเล 1 จาน"></option>
+                                <option value="ยำวุ้นเส้น 1 จาน"></option>
+                                <option value="ยำหนังหมู 1 จาน"></option>
+                                <option value="ยำหมูย่าง 1 จาน"></option>
+                                <option value="ยำเนื้อย่าง 1 จาน"></option>
+                                <option value="ยำไข่ต้ม 1 ฟอง"></option>
+                                <option value="ยำไส้กรอก 1 จาน"></option>
+                                <option value="รวมมิตร 1 ถ้วย"></option>
+                                <option value="ลาบไก่ 1 จาน"></option>
+                                <option value="ลาบหมู 1 จาน"></option>
+                                <option value="วุ้นเส้นผัดไทย กุ้งสด 1 จาน"></option>
+                                <option value="สปาเกตตี้กระเพรากุ้ง 1 จาน"></option>
+                                <option value="สปาเก็ตตี้ไก่อบ 1 จาน"></option>
+                                <option value="สลัดผัก 1 จาน"></option>
+                                <option value="สลัดเนื้อสันในทอด 1 จาน"></option>
+                                <option value="สลัดแขก 1 จาน"></option>
+                                <option value="สุกียากี้แห้งทะเล 1 ถ้วย"></option>
+                                <option value="สุกี้ยากี้ไก่-น้ำ 1 ชาม"></option>
+                                <option value="สเต็กปลาย่าง 1 จาน"></option>
+                                <option value="สเต็กหมู ผักสดคลุก 1 จาน"></option>
+                                <option value="สเต็กหมู สลัดผักสด 1 จาน"></option>
+                                <option value="สเต็กไก่ทอด มันบด 1 จาน"></option>
+                                <option value="ส้มตำปู 1 จาน"></option>
+                                <option value="ส้มตำไทย 1 จาน"></option>
+                                <option value="ส้มเขียวหวาน 1 ผล"></option>
+                                <option value="ส้มเช้ง 1 ผล"></option>
+                                <option value="ส้มแป้น 1 กิโลกรัม"></option>
+                                <option value="ส้มโอ 1 กลีบ"></option>
+                                <option value="หมี่กรอบราดหน้าหมู 1 จาน"></option>
+                                <option value="หมี่กะทิ 1 จาน"></option>
+                                <option value="หมี่ซั่วผัด 1 จาน"></option>
+                                <option value="หมุย่างเกาหลี 1 ชุด"></option>
+                                <option value="หมูกรอบ 1 จาน"></option>
+                                <option value="หมูกะทะ 1 ชุด"></option>
+                                <option value="หมูคลุกเกร็ดขนมปังทอด ซอส 1 ชุด"></option>
+                                <option value="หมูจุ่ม 1 ชุด"></option>
+                                <option value="หมูทอดกระเทียมพริกไทย 3x5 นิ้ว"></option>
+                                <option value="หมูทอดเนย สลัดน้ำใส 1 จาน"></option>
+                                <option value="หมูน้ำตก 1 จาน"></option>
+                                <option value="หมูปิ้ง 2 ไม้"></option>
+                                <option value="หมูผัดขิง 1 จาน"></option>
+                                <option value="หมูฝอย 2 ช้อนโต๊ะ"></option>
+                                <option value="หมูยอชุบแป้งทอด 2 ชิ้น"></option>
+                                <option value="หมูสะเต๊ะ 2 ไม้"></option>
+                                <option value="หมูหยอง 2 ช้อนโต๊ะ"></option>
+                                <option value="หมูแผ่น 1 แผ่นกลาง"></option>
+                                <option value="หลนปูเค็ม ผักสด 1 ถ้วย"></option>
+                                <option value="หอยแมลงภู่ทอด 1 จาน"></option>
+                                <option value="หอยแมลงภู่อบหม้อดิน 4-5 ตัว"></option>
+                                <option value="หัวกะทิ 1 ช้อนชา"></option>
+                                <option value="เกาเหลาลูกชิ้นน้ำใส 1 ถ้วย"></option>
+                                <option value="เกี๊ยวกรอบ 3 ชิ้น"></option>
+                                <option value="เกี๊ยวกรอบราดหน้ากุ้ง 1 จาน"></option>
+                                <option value="เกี๊ยวซ่า 3 ชิ้น"></option>
+                                <option value="เกี๊ยวน้ำกุ้ง 1 ชาม"></option>
+                                <option value="เกี๊ยวปลาน้ำ 1 ถ้วย"></option>
+                                <option value="เครื่องในไก่ผัดขิง 1 จาน"></option>
+                                <option value="เต้าเจี้ยวขาว 100 กรัม"></option>
+                                <option value="เนย 1 ช้อนชา"></option>
+                                <option value="เนื้อน้ำตก 1 จาน"></option>
+                                <option value="เนื้อเค็มทอด 3x5 นิ้ว"></option>
+                                <option value="เป็ดตุ๋น มะนาวดอง 1 ถ้วย"></option>
+                                <option value="เป็ดพะโล้ 1 ถ้วย"></option>
+                                <option value="เย็นตาโฟน้ำ 1 ชาม"></option>
+                                <option value="เส้นจันท์ผัดปู 1 จาน"></option>
+                                <option value="เส้นหมี่ลูกชิ้นน้ำใส 1 ชาม"></option>
+                                <option value="เส้นหมี่ลูกชิ้นหมูแห้ง 1 ถ้วย"></option>
+                                <option value="เส้นใหญ่ผัดขี้เมา"></option>
+                                <option value="แกงกะหรี่หมู 1 ถ้วย"></option>
+                                <option value="แกงกะหรี่ไก่ 1 ถ้วย"></option>
+                                <option value="แกงขี้เหล็ก 1 ถ้วย"></option>
+                                <option value="แกงขี้เหล็กหมูย่าง 1 ถ้วย"></option>
+                                <option value="แกงจืดตำลึงหมูสับ 1 ถ้วย"></option>
+                                <option value="แกงจืดถั่วงอกหมูสับ 1 ถ้วย"></option>
+                                <option value="แกงจืดฟักยัดไส้ 1 ถ้วย"></option>
+                                <option value="แกงจืดมะระยัดไส้ 1 ถ้วย"></option>
+                                <option value="แกงจืดวุ้นเส้น 1 ถ้วย"></option>
+                                <option value="แกงจืดเต้าหู้ยัดไส้ 1 ถ้วย"></option>
+                                <option value="แกงจืดเต้าหู้หมูสับ 1 ถ้วย"></option>
+                                <option value="แกงจืดไข่เจียว 1 ถ้วย (ไข่ 1 ฟอง)"></option>
+                                <option value="แกงป่าไก่ 1 ถ้วย"></option>
+                                <option value="แกงมัสมั่นไก่ 1 ถ้วย"></option>
+                                <option value="แกงส้มชะอมชุบไข่ทอดกับกุ้ง 1 ถ้วย"></option>
+                                <option value="แกงส้มดอกแคกับกุ้ง 1 ถ้วย"></option>
+                                <option value="แกงส้มปลาแปะซะ 1 ถ้วย"></option>
+                                <option value="แกงส้มผักกะเฉด-ปลา 1 ชาม"></option>
+                                <option value="แกงส้มผักบุ้ง ปลาช่อน 1 ถ้วย"></option>
+                                <option value="แกงส้มผักรวม 1 ถ้วย"></option>
+                                <option value="แกงส้มผักรวมกุ้ง 1 ถ้วย"></option>
+                                <option value="แกงหมูเทโพ 1 ถ้วย"></option>
+                                <option value="แกงเขียวหวานปลาดุก 1 ถ้วย"></option>
+                                <option value="แกงเขียวหวานลูกชิ้นปลากราย 1 ถ้วย"></option>
+                                <option value="แกงเขียวหวานหมู 1 ถ้วย"></option>
+                                <option value="แกงเขียวหวานไก่ 1 ถ้วย"></option>
+                                <option value="แกงเผ็ดฟักทอง ใส่หมู 1 ถ้วย"></option>
+                                <option value="แกงเผ็ดลูกชิ้นปลา 1 ถ้วย"></option>
+                                <option value="แกงเผ็ดหมูยอดมะพร้าว 1 ถ้วย"></option>
+                                <option value="แกงเผ็ดเป็ดย่าง 1 ถ้วย"></option>
+                                <option value="แกงเผ็ดไก่ใส่มะเขือ 1 ถ้วย"></option>
+                                <option value="แกงเผ็ดไก่ใส่หน่อไม้ 1 ถ้วย"></option>
+                                <option value="แกงเลียง 1 ชาม"></option>
+                                <option value="แกงเหลืองมะละกอกับกุ้ง 1 ถ้วย"></option>
+                                <option value="แกงเหลืองหน่อไม้ดองกับปลา 1 ถ้วย"></option>
+                                <option value="แกงไตปลา 1 ถ้วย"></option>
+                                <option value="แก้วมังกร 8 ชิ้นพอคำ"></option>
+                                <option value="แคนตาลูป 8 ชิ้นพอคำ"></option>
+                                <option value="แคบหมู มีมัน 5 ชิ้นเล็ก"></option>
+                                <option value="แคบหมูไร้มัน 5 ชิ้นเล็ก"></option>
+                                <option value="แจ่วบอง 1 ถ้วย"></option>
+                                <option value="แซนวิชทูน่า 1 คู่"></option>
+                                <option value="แซนวิชแฮม ชีส 1 คู่"></option>
+                                <option value="แซนวิชไก่ 1 คู่"></option>
+                                <option value="แยมโรล 1 ชิ้น"></option>
+                                <option value="แหนมสด 1 จาน"></option>
+                                <option value="แหนมสด ข้าวทอด 1 จาน"></option>
+                                <option value="แฮมเบอร์เกอร์ชีส ไก่ 1 ชิ้น"></option>
+                                <option value="แฮมเบอร์เกอร์ชีสไก่ 1 ชิ้น"></option>
+                                <option value="แฮมเบอร์เกอร์หมู 1 ชิ้น"></option>
+                                <option value="โกยซีหมี่ 1 จาน"></option>
+                                <option value="โจ๊กหมู 1 ถ้วย"></option>
+                                <option value="โจ๊กหมู ตับ ไข่ลวก 1 ถ้วย"></option>
+                                <option value="ไก่ตุ๋นมะนาวดอง 1 ถ้วย"></option>
+                                <option value="ไก่ทอด 1 น่อง"></option>
+                                <option value="ไก่ทอด 1 น่อง"></option>
+                                <option value="ไก่ผัดขิง 1 จาน"></option>
+                                <option value="ไก่ย่าง 1 น่อง"></option>
+                                <option value="ไก่ย่าง 1 น่อง"></option>
+                                <option value="ไข่ดาว 1 ฟอง"></option>
+                                <option value="ไข่ดาวทรงเครื่อง 1 จาน"></option>
+                                <option value="ไข่ตุ๋น 1 ฟอง"></option>
+                                <option value="ไข่ต้ม น้ำปลามะนาว 1 ฟอง"></option>
+                                <option value="ไข่นกกระทา 11 ใบ"></option>
+                                <option value="ไข่พะโล้ 1 ถ้วย"></option>
+                                <option value="ไข่ยัดไส้ 1 จาน"></option>
+                                <option value="ไข่ลวก 1 ฟอง"></option>
+                                <option value="ไข่ลูกเขย 1 ฟอง"></option>
+                                <option value="ไข่เค็ม 1 ฟอง"></option>
+                                <option value="ไข่เจียว 1 ฟอง"></option>
+                                <option value="ไข่เจียวหมูสับ 1 ฟอง"></option>
+                                <option value="ไข่ไก่-ไข่เป็ด 1 ฟอง"></option>
+                                <option value="ไก่ KFC สะโพก 1 ชิ้น"></option>
+                                <option value="ไก่ KFC ฮอทวิงส์ 1 ชิ้น"></option>
+                                <option value="McDonald แฮมเบอร์เกอร์"></option>
+                                <option value="McDonald ชีสเบอร์เกอร์"></option>
+                                <option value="McDonald ดับเบิ้ลชีสเบอร์เกอร์"></option>
+                                <option value="McDonald บิ๊กแมค"></option>
+                                <option value="McDonald เบอร์เกอร์หมู"></option>
+                                <option value="McDonald ซามูไรเบอร์เกอร์"></option>
+                                <option value="McDonald แมคฟิช"></option>
+                                <option value="McDonald เบอร์เกอร์ไก่เปปเปอร์"></option>
+                                <option value="McDonald แมคไก่"></option>
+                                <option value="McDonald สไปซี่ แมควิงส์ 4 ชิ้น"></option>
+                                <option value="McDonald ไก่ทอด (สะโพก)"></option>
+                                <option value="McDonald แมคนักเก็ต 6 ชิ้น"></option>
+                                <option value="McDonald เฟรนซ์ฟรายส์ ขนาดกลาง"></option>
+                                <option value="McDonald เฟรชสลัด น้ำสลัดซีอิ๊วงาญี่ปุ่น"></option>
+                                <option value="McDonald เฟรชสลัด น้ำสลัดครีมงาญี่ปุ่น"></option>
+                                <option value="ซูชิหน้าปลามากุโระ 1 คำ"></option>
+                                <option value="แจ่วปลาร้า 150 กรัม (1 ถ้วย)"></option>
+                                <option value="ตำข้าวปุ้น 1 จาน"></option>
+                                <option value="คั่วไข่มดแดง 200 กรัม (1 จาน)"></option>
+                                <option value="ก้อยกุ้งฝอย 300 กรัม (1 จาน)"></option>
+                                <option value="แกงหน่อไม้อีสาน 100 กรัม (1 ถ้วย)"></option>
+                                <option value="เสือร้องไห้ 100 กรัม (1 จาน)"></option>
+                                <option value="ลาบเป็น 200 กรัม (1 จาน)"></option>
+                                <option value="ผัดหมี่อีสาน 200 กรัม (1 จาน)"></option>
+                                <option value="ไส้กรอกอีสาน 100 กรัม (4-5 ไม้)"></option>
+                                <option value="ปลาส้มทอด 300 กรัม"></option>
+                                <option value="แกงฮังเล 300 กรัม (1 ถ้วย)"></option>
+                                <option value="น้ำพริกข่า 150 กรัม (1 ถ้วย)"></option>
+                                <option value="แกงผักกาดจอ 300 กรัม (1 ถ้วย)"></option>
+                                <option value="แกงขนุน 300 กรัม (1 ถ้วย)"></option>
+                                <option value="ใบเหลียงผัดไข่ 1 จาน"></option>
+                                <option value="ต้มส้มปลากระป๋อง 300 กรัม"></option>
+                                <option value="ขนมจีนน้ำยาปักษ์ใต้ 300 กรัม (1 จาน)"></option>
+                                <option value="แกงเหลืองหน่อไม้ดองปลา 1 ถ้วย"></option>
+                                <option value="หอยนางรม 100 กรัม"></option>
+                            </datalist>
+
+                            <div class="col-4">
+                                <input name="morning_food_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="morning_food_u" placeholder="ยูนิต/จำนวน" value=""
+                                    maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" placeholder="-เลือกเมนูทานเล่น-"
+                                name="morning_fruit" id="morning_fruit" list="morning_fruit_list">
+                            <datalist id="morning_fruit_list">
+
+                                <option value="ไม่ได้ทาน"></option>
+                                <option value="กระทงทอง ไส้ไก่ ซอสขาว 3 ชิ้น"></option>
+                                <option value="กระทงทองไส้ข้าวโพด 3 ชิ้น"></option>
+                                <option value="กระท้อนทรงเครื่อง 1 ผล"></option>
+                                <option value="กระยาสารท 1x3 นิ้ว"></option>
+                                <option value="กล้วยคลุกมะพร้าว 1 ถ้วย"></option>
+                                <option value="กล้วยฉาบ 9 ชิ้น"></option>
+                                <option value="กล้วยตาก 1/2 ผล"></option>
+                                <option value="กล้วยต้มจิ้มมะพร้าว 1 จาน(2ผล)"></option>
+                                <option value="กล้วยน้ำว้า 1 ผล"></option>
+                                <option value="กล้วยน้ำว้าปิ้ง 1 ผล"></option>
+                                <option value="กล้วยบวชชี 1 ถ้วย"></option>
+                                <option value="กล้วยปิ้งชุบกะทิ 1 ผล"></option>
+                                <option value="กล้วยหอม 1 ผล"></option>
+                                <option value="กล้วยเล็บมือนาง 2 ผล"></option>
+                                <option value="กล้วยแขก 3 ชิ้น"></option>
+                                <option value="กล้วยไข่ 1 ผล"></option>
+                                <option value="กล้วยไข่เชื่อม 1 จาน(2ผล)"></option>
+                                <option value="กะละแม 3 ห่อเล็ก"></option>
+                                <option value="กะหรี่พัฟ 2 ชิ้น"></option>
+                                <option value="กุ่ยช่าย(นึ่ง) 1 อัน"></option>
+                                <option value="ขนมกรวย 3 กรวย"></option>
+                                <option value="ขนมกล้วย 2 ห่อ"></option>
+                                <option value="ขนมขี้หนู 1 ถ้วย"></option>
+                                <option value="ขนมครก 2 คู่"></option>
+                                <option value="ขนมจีบ 3 ลูก"></option>
+                                <option value="ขนมชั้น 2 ชิ้น"></option>
+                                <option value="ขนมตาล 2 กระทง"></option>
+                                <option value="ขนมต้มขาว 4 ลูก"></option>
+                                <option value="ขนมถั่วแปป 1 จาน 3ตัว (110 กรัม)"></option>
+                                <option value="ขนมถ้วย 2 ถ้วย"></option>
+                                <option value="ขนมน้ำดอกไม้ 1 จาน(9ชิ้น)"></option>
+                                <option value="ขนมบ้าบิ่น 1 ชิ้น"></option>
+                                <option value="ขนมปลากริมไข่เต่า 1 ถ้วย"></option>
+                                <option value="ขนมปังกระเทียม 2 ชิ้น"></option>
+                                <option value="ขนมปังขาไก่ 1 ชิ้น"></option>
+                                <option value="ขนมปังน้ำสลัดหมูหยอง 1 ชิ้น"></option>
+                                <option value="ขนมปังปอนด์ 1 แผ่น"></option>
+                                <option value="ขนมปังมะพร้าว 1 ชิ้น"></option>
+                                <option value="ขนมปังสังขยา 1 ชิ้น"></option>
+                                <option value="ขนมปังอบกรอบ 4 แผ่นเล็ก"></option>
+                                <option value="ขนมปังฮาวายเอี้ยน 1 ชิ้น"></option>
+                                <option value="ขนมปังไส้กรอก 1 ชิ้น"></option>
+                                <option value="ขนมปังไส้หมูหยอง 1 ชิ้น"></option>
+                                <option value="ขนมปังไส้ไก่ 1 ชิ้น"></option>
+                                <option value="ขนมฝักบัว 2 ชิ้น"></option>
+                                <option value="ขนมสอดไส้ 3 ห่อเล็ก"></option>
+                                <option value="ขนมหม้อแกง 1 ชิ้น"></option>
+                                <option value="ขนมหัวผักกาดผัด 1 จาน"></option>
+                                <option value="ขนมหัวผักกาดผัด ใส่ไข่ 1 จาน"></option>
+                                <option value="ขนมเข่ง 1 กระทง"></option>
+                                <option value="ขนมเทียน 2 อัน"></option>
+                                <option value="ขนมเบื้องญวณ 1 แผ่น"></option>
+                                <option value="ขนมเบื้องไทยไส้หวาน 1 แผ่น"></option>
+                                <option value="ขนมเบื้องไทยไส้เค็ม 1 แผ่น"></option>
+                                <option value="ขนมเปียกปูน 1 ชิ้น"></option>
+                                <option value="ขนมเปี๊ยะไส้ถั่ว 2 ชิ้น"></option>
+                                <option value="ขนมเล็บมือนาง 1 จานเล็ก"></option>
+                                <option value="ขนมไหว้พระจันทร์ไส้ทุเรียนกวน 1 ชิ้น"></option>
+                                <option value="ขนมไหว้พระจันทร์ไส้ลูกบัว-ไข่เค็ม 1 ชิ้น"></option>
+                                <option value="ขนุน 2 ยวง"></option>
+                                <option value="ข้าวหลาม 1 กระบอก"></option>
+                                <option value="ข้าวเกรียบกุ้ง 3 แผ่น"></option>
+                                <option value="ข้าวเกรียบปากหม้อ 4 ชิ้น"></option>
+                                <option value="ข้าวเม่าทอด 2 ลูก"></option>
+                                <option value="ข้าวเหนียวกะทิทุเรียน 1 ถ้วย"></option>
+                                <option value="ข้าวเหนียวดำเปียก 1 ถ้วย"></option>
+                                <option value="ข้าวเหนียวตัด 1 ชิ้น"></option>
+                                <option value="ข้าวเหนียวนึ่ง 1-2 ทัพพี (35 กรัม)"></option>
+                                <option value="ข้าวเหนียวมูลน้ำกะทิ 1 ชิ้นเล็ก"></option>
+                                <option value="ข้าวเหนียวสังขยา 1 ห่อ"></option>
+                                <option value="ข้าวแช่ 1 ชุด"></option>
+                                <option value="ข้าวแตน (ข้าวพองราดน้ำตาล) 1 แผ่น"></option>
+                                <option value="ข้าวโพดคลุก 1 จานเล็ก"></option>
+                                <option value="ข้าวโพดคั่ว (เคลือบน้ำตาล) 1 ถ้วย"></option>
+                                <option value="ข้าวโพดต้ม 1 ฝักเล็ก"></option>
+                                <option value="ข้าวโอ๊ตสุก 1 ถ้วยตวง"></option>
+                                <option value="ครองแครง 22 ตัว"></option>
+                                <option value="ครองแครงกะทิ 1 ถ้วย"></option>
+                                <option value="ครีมโรล 1 ชิ้น"></option>
+                                <option value="คัสตาร์ดน้ำตาลไหม้ 1 ชิ้น"></option>
+                                <option value="คุ้กกี้ข้าวโอ๊ต 2 ชิ้น"></option>
+                                <option value="คุ้กกี้ชาเขียว 1 ชิ้น"></option>
+                                <option value="คุ้กกี้ช็อคโกแลตชิพ 2 ชิ้น"></option>
+                                <option value="คุ้กกี้สิงคโปร์ 2 ชิ้น"></option>
+                                <option value="คุ้กกี้เนย 2 ชิ้น"></option>
+                                <option value="คุ้กกี้ไส้สับปะรด 1 ชิ้น"></option>
+                                <option value="งาขาว 100 กรัม"></option>
+                                <option value="งาดำ 100 กรัม"></option>
+                                <option value="จาวตาลเชื่อม 1 ลูก"></option>
+                                <option value="ชมพู่ 2-3 ผล"></option>
+                                <option value="ชมพู่เมืองเพชร 2 ผล"></option>
+                                <option value="ชิฟฟอนกาแฟ 1 ชิ้น"></option>
+                                <option value="ชิฟฟอนคัสตาร์ดเค้ก 1 ชิ้น"></option>
+                                <option value="ช็อคโกแลต 1 ชิ้นพอคำ"></option>
+                                <option value="ซาลาเปาไส้หมู 1 ลูก"></option>
+                                <option value="ซ่าหริ่ม 1 ถ้วย"></option>
+                                <option value="ตะโก้แห้ว 3 กระทงเล็ก"></option>
+                                <option value="ถั่วดำดิบ 100 กรัม"></option>
+                                <option value="ถั่วลิสงดิบ 100 กรัม"></option>
+                                <option value="ถั่วลิสงต้ม 1 ช้อนโต๊ะ"></option>
+                                <option value="ถั่วลิสงแผ่นทอด 1 แผ่น"></option>
+                                <option value="ถั่วเขียวดิบ 100 กรัม"></option>
+                                <option value="ถั่วเขียวต้มน้ำตาล 1 ถ้วย"></option>
+                                <option value="ถั่วเหลืองดิบ 100 กรัม"></option>
+                                <option value="ถั่วแขก 100 กรัม"></option>
+                                <option value="ถั่วแดงดิบ 100 กรัม"></option>
+                                <option value="ถั่วแระต้ม 1 ช้อนโต๊ะ"></option>
+                                <option value="ทองม้วน 3 อันเล็ก"></option>
+                                <option value="ทองหยิบ 2 ดอก"></option>
+                                <option value="ทับทิมกรอบ 1 ถ้วย"></option>
+                                <option value="ทุเรียนกระดุม 100 กรัม"></option>
+                                <option value="ทุเรียนกวน 100 กรัม"></option>
+                                <option value="ทุเรียนชะนี 100 กรัม"></option>
+                                <option value="ทุเรียนทอดกรอบ 7-8 ชิ้น"></option>
+                                <option value="ท๊อฟฟี่นม 1 เม็ด"></option>
+                                <option value="น้อยหน่า 1/2 ผล"></option>
+                                <option value="บราวนี่ 1 ชิ้น"></option>
+                                <option value="บะจ่าง 1 ลูก"></option>
+                                <option value="บัวลอย 1 ถ้วย"></option>
+                                <option value="บัวลอยน้ำขิง 1 ถ้วย"></option>
+                                <option value="บัวลอยเผือก 1 ถ้วย"></option>
+                                <option value="บูลเบอร์รี่ชีสเค้ก 1 ชิ้น"></option>
+                                <option value="ป๊อปคอร์น 1 ถ้วย"></option>
+                                <option value="ฝรั่ง 1/2 ผล"></option>
+                                <option value="ฝรั่งกลม (สาลี่) 1/2 ผล"></option>
+                                <option value="ฝอยทอง 1 แพ"></option>
+                                <option value="พอร์คชอปทอด ผักผัดเนย 1 จาน"></option>
+                                <option value="พะแนงไก่ 1 ถ้วย"></option>
+                                <option value="พายกรอบ (โรยน้ำตาล) 2 ชิ้น"></option>
+                                <option value="พายชีสบูลเบอร์รี่ 1 ชิ้น"></option>
+                                <option value="พายทูน่า 1 ชิ้น"></option>
+                                <option value="พายสับปะรด 1 ชิ้น"></option>
+                                <option value="พายเผือก 1 ชิ้น"></option>
+                                <option value="พายไส้กรอก 1 ชิ้น"></option>
+                                <option value="พายไส้แฮม 1 ชิ้น"></option>
+                                <option value="พายไส้ไก่ 1 ชิ้น"></option>
+                                <option value="พิซซ่าขอบไส้กรอกชีส 1 ชิ้น"></option>
+                                <option value="พิซซ่าทะเล 1 ชิ้น"></option>
+                                <option value="พิซซ่าฮาวายเอี้ยน 1 ชิ้น"></option>
+                                <option value="พิซซ่าไส้กรอก 1 ชิ้น"></option>
+                                <option value="พุทรา 4 ผล"></option>
+                                <option value="ฟรุตสลัด 1 ถ้วย"></option>
+                                <option value="ฟรุตเค้ก 1 ชิ้น"></option>
+                                <option value="ฟรุ้ตบาร์ 1 ชิ้น"></option>
+                                <option value="ฟักทองเชื่อม 1 จานเล็ก"></option>
+                                <option value="ฟักทองแกงบวด 1 ถ้วย"></option>
+                                <option value="มะกอกทรงเครื่อง 5 ผล"></option>
+                                <option value="มะกอกฝรั่ง 3 ผล"></option>
+                                <option value="มะกอกแช่อิ่ม 5 ผล"></option>
+                                <option value="มะขามคลุก 6 เม็ด"></option>
+                                <option value="มะขามหวาน 2 ฝัก"></option>
+                                <option value="มะขามเทศ 3 ฝัก"></option>
+                                <option value="มะดันแช่อิ่ม 1 ผล"></option>
+                                <option value="มะปรางสุก 3 ผล"></option>
+                                <option value="มะม่วงน้ำดอกไม้สุก 4 ชิ้น"></option>
+                                <option value="มะม่วงน้ำปลาหวาน 5 ชิ้น"></option>
+                                <option value="มะม่วงอกร่องสุก 4 ชิ้น"></option>
+                                <option value="มะม่วงเขียวเสวย 1/2 ผล"></option>
+                                <option value="มะยม 15 ผล"></option>
+                                <option value="มะยมหยี 5 เม็ด"></option>
+                                <option value="มะยมเชื่อม 5 เม็ด"></option>
+                                <option value="มะละกอ 8 ชิ้นพอคำ"></option>
+                                <option value="มะเฟือง 1/2 ผล"></option>
+                                <option value="มะไฟ 15 ผล"></option>
+                                <option value="มังคุด 4 ผล"></option>
+                                <option value="มันทอด 2 ชิ้น"></option>
+                                <option value="มันฝรั่งแผ่นทอด (Chip) 6 ชิ้น"></option>
+                                <option value="มันรังนก 2 ก้อน"></option>
+                                <option value="มันสำปะหลังปิ้งชุบกะทิ 1 ชิ้น"></option>
+                                <option value="มันเทศเชื่อม 1 จานเล็ก"></option>
+                                <option value="มันแกงบวด 1 ถ้วย"></option>
+                                <option value="ระกำ 4 ผล"></option>
+                                <option value="ลองกอง 10 ผล"></option>
+                                <option value="ลอดช่องน้ำกะทิ 1 ถ้วย"></option>
+                                <option value="ลอดช่องสิงคโปร์ 1 ถ้วย"></option>
+                                <option value="ละมุด 1 1/2 ผล"></option>
+                                <option value="ลางสาด 10 ผล"></option>
+                                <option value="ลำใยในน้ำเชื่อม 1 ถ้วย"></option>
+                                <option value="ลำไย 4 ผล"></option>
+                                <option value="ลิ้นจี่ 4 ผล"></option>
+                                <option value="ลิ้นจี่ในน้ำเชื่อม 1 ถ้วย"></option>
+                                <option value="ลูกชิ้นทอด 6 ลูก"></option>
+                                <option value="ลูกชิ้นปิ้ง 1 ไม้"></option>
+                                <option value="ลูกชุบ 3 ชิ้น"></option>
+                                <option value="ลูกตาลลอยแก้ว 1 ถ้วย"></option>
+                                <option value="ลูกตาลอ่อน 1 1/2 ผล"></option>
+                                <option value="ลูกพลับ 1/2 ผล"></option>
+                                <option value="ลูกเกด 15 เม็ด"></option>
+                                <option value="ลูกเดือย 100 กรัม"></option>
+                                <option value="ลูกเดือยต้มน้ำตาล 1 ถ้วย"></option>
+                                <option value="วุ้นกะทิ 1 ชิ้น"></option>
+                                <option value="วุ้นมะพร้าวอ่อน 1 ชิ้น"></option>
+                                <option value="สตรอวเบอร์รี่ 6 ผล"></option>
+                                <option value="สละ (หวาน) 3 ผล"></option>
+                                <option value="สังขยา 1 ชิ้นเล็ก"></option>
+                                <option value="สังขยา(ทาขนมปัง) 1 ช้อนชา"></option>
+                                <option value="สังขยาฟักทอง 1 ชิ้นเล็ก"></option>
+                                <option value="สังขยาเผือก 1 ชิ้นเล็ก"></option>
+                                <option value="สับปะรด 8 ชิ้นพอคำ"></option>
+                                <option value="สาคูบัวลอย 1 ถ้วย"></option>
+                                <option value="สาคูเปียกรวมมิตร 1 ถ้วย"></option>
+                                <option value="สาคูไส้หมู 4 ลูก"></option>
+                                <option value="สาลี่ 1 ชิ้น"></option>
+                                <option value="สาลี่หอม 1 ผล"></option>
+                                <option value="สาเกเชื่อมราดกะทิ 1 ชิ้น"></option>
+                                <option value="องุ่น (หวาน) 15 ผล"></option>
+                                <option value="องุ่น (เปรี้ยวอมหวาน) 20 ผล"></option>
+                                <option value="อัพไซด์ดาวน์เค้ก 1 ชิ้น"></option>
+                                <option value="อัลมอนต์อบเกลือ 1 ช้อนโต๊ะ"></option>
+                                <option value="อาลัว 4 ชิ้น"></option>
+                                <option value="อ้อยควั่น 5 ชิ้น"></option>
+                                <option value="เกาลัดคั่ว 100 กรัม"></option>
+                                <option value="เกาลัดจีน 4 เม็ดใหญ่ 35 กรัม"></option>
+                                <option value="เค้กกล้วยตาก 1 ชิ้น"></option>
+                                <option value="เค้กกล้วยหอม 1 ชิ้น"></option>
+                                <option value="เค้กช็อคโกแลต 1 ชิ้น"></option>
+                                <option value="เค้กเนย 1 ชิ้น"></option>
+                                <option value="เค้กเนยแต่งหน้า 1 ชิ้น"></option>
+                                <option value="เค้กใบเตย 1 ชิ้น"></option>
+                                <option value="เงาะ 4 ผล"></option>
+                                <option value="เฉาก๊วย 1 ถ้วย"></option>
+                                <option value="เชอรี่ (มาราชิโน) 4 ผล"></option>
+                                <option value="เดนิสแฮม 1 ชิ้น"></option>
+                                <option value="เต้าส่วน 1 ถ้วย"></option>
+                                <option value="เต้าหู้ขาวอ่อน 1 หลอด"></option>
+                                <option value="เต้าหู้ทอด 3 ชิ้น"></option>
+                                <option value="เต้าหู้นมสด 1 ถ้วย"></option>
+                                <option value="เต้าหู้เหลือง 1 อัน"></option>
+                                <option value="เต้าฮวยฟรุตสลัด 1 ถ้วย"></option>
+                                <option value="เทมปุระ 3 ชิ้น"></option>
+                                <option value="เนื้อมะพร้าวอ่อน 100 กรัม"></option>
+                                <option value="เนื้อมะพร้าวแก่ 100 กรัม"></option>
+                                <option value="เผือกน้ำกะทิ 1 ถ้วย"></option>
+                                <option value="เผือกสอดไส้ทอด 1 ชิ้น"></option>
+                                <option value="เผือกเชื่อม 1 จานเล็ก"></option>
+                                <option value="เฝอ 1 ถ้วย"></option>
+                                <option value="เฟรนฟรายด์ (French Fried) 6 ชิ้นเฟรนช์ฟราย"></option>
+                                <option value="เมล็ดทานตะวันอบกรอบ 1 ช้อนโต๊ะ"></option>
+                                <option value="เมล็ดบัวนึ่ง 100 กรัม"></option>
+                                <option value="เมล็ดฟักทองอบกรอบ 1 ช้อนโต๊ะ"></option>
+                                <option value="เมล็ดแตงโมแห้ง 1 ช้อนโต๊ะ"></option>
+                                <option value="เมี่ยงก๋วยเตี๋ยว 3 คำ"></option>
+                                <option value="เมี่ยงคะน้า 3 คำ"></option>
+                                <option value="เมี่ยงคำ 3 คำ"></option>
+                                <option value="เม็ดขนุน 5 เม็ด"></option>
+                                <option value="เม็ดมะม่วงหิมพานต์ 100 กรัม"></option>
+                                <option value="เม็ดมะม่วงหิมพานต์อบเนย 8-10 เม็ด"></option>
+                                <option value="เยลลี่ถ้วย 2 ถ้วย"></option>
+                                <option value="เอแคร์ไส้ครีม 1 ชิ้น"></option>
+                                <option value="แตงโม 1 กิโลกรัม"></option>
+                                <option value="แตงโม 1 ชิ้นพอดีคำ 60 กรัม"></option>
+                                <option value="แตงไทย 8 ชิ้นพอคำ"></option>
+                                <option value="แบล็กฟลอเรสต์เค้ก 1 ชิ้น"></option>
+                                <option value="แมงลักน้ำกะทิ 1 ถ้วย"></option>
+                                <option value="แยม 1 ช้อนชา"></option>
+                                <option value="แอปเปิ้ล 1/2 ผล"></option>
+                                <option value="โก๋แก่รสต่าง ๆ 15 เม็ด"></option>
+                                <option value="โดนัท แยม น้ำตาล 1 ชิ้น"></option>
+                                <option value="โดนัทยีสต์ 1 ชิ้น"></option>
+                                <option value="โยเกิร์ต (รสธรรมชาติ) 1 กล่อง"></option>
+                                <option value="โยเกิร์ต (รสผลไม้) 1 กล่อง"></option>
+                                <option value="โยเกิร์ต (ไขมันต่ำรสผลไม้) 1 กล่อง"></option>
+                                <option value="โรตี (ใส่นมข้น+น้ำตาล+ใส่ไข่)โรตีใส่ไข่,โรตีใส่น้ำตาล,โรตีใส่นม">
+                                </option>
+                                <option value="โรตีสายไหม 1 อัน"></option>
+                                <option value="โรตีแกงเนื้อ, หมู 1 ชุด"></option>
+                                <option value="ไข่หงส์ 3 ใบ"></option>
+                                <option value="ไส้กรอกทอด 1 ชิ้น"></option>
+                                <option value="ไส้กรอกอีสาน 1 อัน"></option>
+                                <option value="ไส้กรอกเนื้อลูกวัวอบ สลัดผัก 1 จาน"></option>
+                                <option value="ไส้อั่ว 4 ชิ้นพอคำ"></option>
+                                <option value="ไอศกรีมกะทิ 2 ก้อน"></option>
+                                <option value="ไอศกรีมกาแฟ 1 ก้อน"></option>
+                                <option value="ไอศกรีมชอกโกแล็ต 1 ก้อน"></option>
+                                <option value="ไอศกรีมวนิลลา 1 ก้อน"></option>
+                                <option value="ไอศกรีมสตรอเบอรี่ 1 ก้อน"></option>
+                                <option value="ไอศกรีมเรซิน 1 ก้อน"></option>
+                                <option value="McDonald พายสับปะรด"></option>
+                                <option value="McDonald ไอศกรีมโคนดิพ"></option>
+                                <option value="McDonald ไอศกรีมโคน"></option>
+                                <option value="McDonald แมคเฟลอร์รี โอรีโอ"></option>
+                                <option value="McDonald ซันเด สตรอเบอรี่"></option>
+                                <option value="McDonald ซันเด ช็อกโกแลต"></option>
+                                <option value="McDonald พายข้าวโพด"></option>
+                                <option value="วาฟเฟิล 1 ชิ้น"></option>
+                                <option value="ฮันนี่โทส 1 ชุด (ไอศครีม 2 ก้อน)"></option>
+                                <option value="ฟรุ๊ตทาร์ต 1 ชิ้น"></option>
+                                <option value="มะขามหวาน 100 กรัม"></option>
+                                <option value="ทุเรียนหมอนทอง 100 กรัม"></option>
+                                <option value="ทุเรียนก้านยาว 100 กรัม"></option>
+                                <option value="พุทรา 100 กรัม"></option>
+                                <option value="ชมพู่มะเหมี่ยว 100 กรัม"></option>
+                                <option value="กล้วยหักมุุก 100 กรัม"></option>
+                                <option value="กล้วยหอม 100 กรัม"></option>
+                                <option value="กล้วยน้ำว้า 100 กรัม"></option>
+                                <option value="กล้วยไข่ 100 กรัม"></option>
+                                <option value="ซูชิหน้าปลาทูน่า 1 คำ"></option>
+                                <option value="ซูชิหน้าปลาฮามาจิ 1 คำ"></option>
+                                <option value="ซูชิหน้าปูอัดคานิ 1 คำ"></option>
+                                <option value="ซูชิหน้าหอยเชลล์โฮตาเตะ 1 คำ"></option>
+                                <option value="ซูชิหน้าไข่ปลาอิคุระ 1 คำ"></option>
+                                <option value="ซูชิหน้ากุ้งนิกิริ 1 คำ"></option>
+                                <option value="ซูชิหน้าปลาไหลอุนาหงิ 1 คำ"></option>
+                                <option value="ซูชิหน้าไข่หวานทามาโกะ 1 คำ"></option>
+                                <option value="ซูชิหน้าแซลมอน 1 คำ"></option>
+                                <option value="นมข้นหวาน 100 กรัม"></option>
+                                <option value="หม่ำ 100 กรัม (1 จาน)"></option>
+                                <option value="มาการอง 1 ชิ้น"></option>
+                                <option value="เฟอร์ราโร โรชเชอร์ 1 ชิ้น"></option>
+                                <option value="คั่วกลิ้งหมู 200 กรัม (1 จาน)"></option>
+                            </datalist>
+
+                            <div class="col-4">
+                                <input name="morning_fruit_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="morning_fruit_u" placeholder="ยูนิต/จำนวน" value=""
+                                    maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" placeholder="-เลือกเมนูเครื่องดื่ม-"
+                                name="morning_bev" id="morning_bev" list="morning_bev_list">
+                            <datalist id="morning_bev_list">
+                                <option value="ไม่ได้ดื่ม"></option>
+                                <option value="กาแฟร้อน 1 แก้ว"></option>
+                                <option value="กาแฟเย็น 1 แก้ว"></option>
+                                <option value="ครีมเทียม 1 ช้อนชา"></option>
+                                <option value="ชาดำเย็น 1 แก้ว"></option>
+                                <option value="ชามะนาว 1 แก้ว"></option>
+                                <option value="ชาร้อน 1 แก้ว"></option>
+                                <option value="ชาเขียว (รสหวาน) 1 แก้ว"></option>
+                                <option value="ชาเย็น 1 แก้ว"></option>
+                                <option value="ช็อคโกแลตร้อน 1 แก้ว"></option>
+                                <option value="ช็อคโกแลตเย็น 1 แก้ว"></option>
+                                <option value="นมจืด (250 cc) 1 กล่อง"></option>
+                                <option value="นมจืด (ไขมันต่ำ) 1 กล่อง"></option>
+                                <option value="นมจืด (ไม่มีไขมัน) 1 กล่อง"></option>
+                                <option value="นมถั่วเหลือง (หวานน้อย) 1 กล่อง"></option>
+                                <option value="นมปรุงแต่ง (รสหวาน) 1 กล่อง"></option>
+                                <option value="นมเปรี้ยว UHT รสผลไม้ (200 cc) 1 กล่อง"></option>
+                                <option value="นมเย็น 1 แก้ว"></option>
+                                <option value="น้ำกระเจี๊ยบ 1 แก้ว"></option>
+                                <option value="น้ำขิง (ขิงผงรสหวาน) 1 กล่อง"></option>
+                                <option value="น้ำจับเลี้ยง 1 แก้ว"></option>
+                                <option value="น้ำชาเขียว (250 ml) 1 กล่อง"></option>
+                                <option value="น้ำชาเขียวผสมน้ำผึ้ง (250 ml) 1 กล่อง"></option>
+                                <option value="น้ำนมข้าวโพด 1 แก้ว"></option>
+                                <option value="น้ำผลไม้รวม 1 กล่อง"></option>
+                                <option value="น้ำผักรวม 1 กล่อง"></option>
+                                <option value="น้ำฝรั่ง 100%(200 ml) 1 กล่อง"></option>
+                                <option value="น้ำมะตูม 1 แก้ว"></option>
+                                <option value="น้ำมะนาว 1 แก้ว"></option>
+                                <option value="น้ำมะพร้าว 1 แก้ว"></option>
+                                <option value="น้ำมะพร้าวผสมเนื้อ 1 กล่อง"></option>
+                                <option value="น้ำมะเขือเทศ 1 แก้ว"></option>
+                                <option value="น้ำมะเขือเทศ100%(200 ml) 1 กล่อง"></option>
+                                <option value="น้ำลำใย 1 แก้ว"></option>
+                                <option value="น้ำสับปะรด 1 แก้ว"></option>
+                                <option value="น้ำสัปปะรด 100%(200 ml) 1 กล่อง"></option>
+                                <option value="น้ำส้ม 100%(200 ml) 1 กล่อง"></option>
+                                <option value="น้ำส้มคั้น 1 แก้ว"></option>
+                                <option value="น้ำองุ่น 1 แก้ว"></option>
+                                <option value="น้ำองุ่นแดง 100%(200 ml) 1 กล่อง"></option>
+                                <option value="น้ำอัดลม (หวาน) 1 แก้ว"></option>
+                                <option value="น้ำอัดลมประเภทโคล่า(325 cc) 1 กระป๋อง"></option>
+                                <option value="น้ำอ้อย 1/2 แก้ว"></option>
+                                <option value="น้ำเต้าหู้(จืด) 1 แก้ว"></option>
+                                <option value="น้ำแอปเปิ้ลแดง 100%(200 ml) 1 กล่อง"></option>
+                                <option value="น้ำใบบัวบก 1 แก้ว"></option>
+                                <option value="น้ำใบเตย 1 แก้ว"></option>
+                                <option value="บรั่นดี (60 cc) 1 แก้ว"></option>
+                                <option value="มิลค์เชค 1 แก้ว"></option>
+                                <option value="วอดก้า 60 cc"></option>
+                                <option value="วิสกี้ 60 cc"></option>
+                                <option value="เต้าฮวยน้ำขิง 1 ถ้วย"></option>
+                                <option value="เบียร์ไทย 1 แก้ว"></option>
+                                <option value="เหล้ายิน 60 cc"></option>
+                                <option value="เหล้ารัม 60 cc"></option>
+                                <option value="แม่โขง (45 cc) 1 แก้ว"></option>
+                                <option value="โกโก้ 1 แก้ว"></option>
+                                <option value="โอวัลติน 1 แก้ว"></option>
+                                <option value="โอเลี้ยง 1 แก้ว"></option>
+                                <option value="ไวน์เชอรี่ 60 cc"></option>
+                                <option value="ไวน์แชมเปญ 60 cc"></option>
+                                <option value="Starbucks Bottled Vanilla Frappuccino Coffee Drink 15 ออนซ์/1 กระป๋อง">
+                                </option>
+                                <option value="Starbucks Bottled Mocha Frappuccino Coffee Drink 15 ออนซ์/1 กระป๋อง">
+                                </option>
+                                <option
+                                    value="Starbucks Bottled Dark Chocolate Mocha Frappuccino Coffee Drink 15 ออนซ์/1 กระป๋อง">
+                                </option>
+                                <option value="Starbucks Bottled Coffee Frappuccino Coffee Drink 15 ออนซ์/1 กระป๋อง">
+                                </option>
+                                <option value="Starbucks Refreshers Strawberry Lemonade 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Refreshers Raspberry Pomegranate 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Refreshers Orange Melon 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Doubleshot Light Espresso Drink 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Doubleshot Espresso Drink 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Doubleshot Energy White Chocolate Drink 15 ออนซ์/1 กระป๋อง">
+                                </option>
+                                <option value="Starbucks Doubleshot Energy Vanilla Light Drink 15 ออนซ์/1 กระป๋อง">
+                                </option>
+                                <option value="Starbucks Doubleshot Energy Vanilla Drink 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Doubleshot Energy Mocha Drink 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Starbucks Doubleshot Energy Coffee Drink 15 ออนซ์/1 กระป๋อง"></option>
+                                <option value="Pike Place Roast 16 ออนซ์/Grande"></option>
+                                <option value="Iced Coffee with Milk 16 ออนซ์/Grande"></option>
+                                <option value="Iced Coffee 16 ออนซ์/Grande"></option>
+                                <option value="Decaf Pike Place Roast 16 ออนซ์/Grande"></option>
+                                <option value="Clover Brewed Coffee 16 ออนซ์/Grande"></option>
+                                <option value="Caffè Misto 16 ออนซ์/Grande"></option>
+                                <option value="Bold Pick of the Day 16 ออนซ์/Grande"></option>
+                                <option value="White Hot Chocolate 16 ออนซ์/Grande"></option>
+                                <option value="Salted Caramel Hot Chocolate 16 ออนซ์/Grande"></option>
+                                <option value="Peppermint Hot Chocolate 16 ออนซ์/Grande"></option>
+                                <option value="Hot Chocolate 16 ออนซ์/Grande"></option>
+                                <option value="Caffè Americano 16 ออนซ์/Grande"></option>
+                                <option value="Caffè Latte 16 ออนซ์/Grande"></option>
+                                <option value="Caffè Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Cappuccino 16 ออนซ์/Grande"></option>
+                                <option value="Caramel Brulée Latte 16 ออนซ์/Grande"></option>
+                                <option value="Caramel Macchiato 16 ออนซ์/Grande"></option>
+                                <option value="Cinnamon Dolce Latte 16 ออนซ์/Grande"></option>
+                                <option value="Eggnog Latte 16 ออนซ์/Grande"></option>
+                                <option value="Espresso 16 ออนซ์/Grande"></option>
+                                <option value="Espresso Con Panna 16 ออนซ์/Grande"></option>
+                                <option value="Flavored Latte 16 ออนซ์/Grande"></option>
+                                <option value="Gingerbread Latte 16 ออนซ์/Grande"></option>
+                                <option value="Iced Caffè Americano 16 ออนซ์/Grande"></option>
+                                <option value="Iced Caffè Latte 16 ออนซ์/Grande"></option>
+                                <option value="Iced Caffè Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Iced Caramel Macchiato 16 ออนซ์/Grande"></option>
+                                <option value="Iced Cinnamon Dolce Latte 16 ออนซ์/Grande"></option>
+                                <option value="Iced Flavored Latte 16 ออนซ์/Grande"></option>
+                                <option value="Iced Peppermint Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Iced Peppermint White Chocolate Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Iced Skinny Flavored Latte 16 ออนซ์/Grande"></option>
+                                <option value="Iced Skinny Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Iced Vanilla Latte 16 ออนซ์/Grande"></option>
+                                <option value="Iced White Chocolate Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Peppermint Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Peppermint White Chocolate Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Pumpkin Spice Latte 16 ออนซ์/Grande"></option>
+                                <option value="Salted Caramel Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Skinny Caramel Macchiato 16 ออนซ์/Grande"></option>
+                                <option value="Skinny Cinnamon Dolce Latte 16 ออนซ์/Grande"></option>
+                                <option value="Skinny Flavored Latte 16 ออนซ์/Grande"></option>
+                                <option value="Skinny Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Skinny Peppermint Mocha 16 ออนซ์/Grande"></option>
+                                <option value="Vanilla Latte 16 ออนซ์/Grande"></option>
+                                <option value="White Chocolate Mocha 16 ออนซ์/Grande"></option>
+                                <option value="McDonald โค้ก 16 ออนซ์"></option>
+                                <option value="McDonald กาแฟเย็น 16 ออนซ์"></option>
+                                <option value="McDonald โอวันติน สวิส เย็น 16 ออนซ์"></option>
+                                <option value="McDonald โค้กโฟลต 12 ออนซ์"></option>
+                                <option value="McDonald กาแฟโฟลต 12 ออนซ์"></option>
+                                <option value="McDonald โอวัลติน สวิส โฟลต 12 ออนซ์"></option>
+                                <option value="ฉลาม กระชายดำ 100 มล."></option>
+                                <option value="เอ็ม-150 150 มล."></option>
+                                <option value="เรดดี้โกจิเบอร์รี่ ผสมกาแฟอีน 150 มล."></option>
+                                <option value="เรดดี้บู้ท (สีม่วง) 150 มล."></option>
+                                <option value="RED BULL Extra เรดบูลเอ็กซ์ตร้า 170 มล."></option>
+                                <option value="กระทิงแดงจีทรี 95 มล."></option>
+                                <option value="กระทิงแดงเอ็กซ์ตร้าเอบีซี 145 มล."></option>
+                                <option value="กระทิงแดงเอ็กซ์ตร้าซิงค์ 145 มล."></option>
+                                <option value="กระทิงแดงทีโอเปล็กซ์แอล 100 มล."></option>
+                                <option value="คาราบาวกรีนแอปเปิ้ล 330 มล."></option>
+                                <option value="กระทิงแดง 150 มล."></option>
+                                <option value="คาราบาวแดง 150 มล."></option>
+                            </datalist>
+                            <div class="col-4">
+                                <input name="morning_bev_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="morning_bev_u" placeholder="ยูนิต/จำนวน" value=""
+                                    maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+
+                        <label class="form-label" id="noon_food_title" style="display:none;"
+                            for="inlineFormCustomSelectPref">มื้อกลางวันของคุณ</label>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" style="display:none;" placeholder="-เลือกเมนูหลัก-"
+                                onchange="opendiv2(this.value)" name="noon_food" id="noon_food"
+                                list="morning_food_list">
+                            <!-- <datalist id="noon_food_list">
+                                <option value="Boston">
+                                <option value="Cambridge">
+                            </datalist> -->
+                            <div class="col-4">
+
+                                <input name="noon_food_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="noon_food_u" style="display:none;"
+                                    placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" style="display:none;"
+                                placeholder="-เลือกเมนูทานเล่น-" name="noon_fruit" id="noon_fruit"
+                                list="morning_fruit_list">
+                            <!-- <datalist id="noon_fruit_list">
+                                <option value="Boston">
+                                <option value="Cambridge">
+                            </datalist> -->
+                            <div class="col-4">
+                                <input name="noon_fruit_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="noon_fruit_u" style="display:none;"
+                                    placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" style="display:none;"
+                                placeholder="-เลือกเมนูเครื่องดื่ม-" name="noon_bev" id="noon_bev"
+                                list="morning_bev_list">
+                            <!-- <datalist id="noon_bev_list">
+                                <option value="Boston">
+                                <option value="Cambridge">
+                            </datalist> -->
+                            <div class="col-4">
+
+                                <input name="noon_bev_u" type="text" class="form-control" id="noon_bev_u"
+                                    style="display:none;" placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2"
+                                    required>
+                            </div>
+                        </div>
+
+                        <label class="form-label" id="night_food_title" style="display:none;"
+                            for="inlineFormCustomSelectPref">มื้อเย็นของคุณ</label>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" style="display:none;" placeholder="-เลือกเมนูหลัก-"
+                                name="night_food" id="night_food" list="morning_food_list">
+                            <!-- <datalist id="night_food_list">
+                                <option value="Boston">
+                                <option value="Cambridge">
+                            </datalist> -->
+                            <div class="col-4">
+
+                                <input name="night_food_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="night_food_u" style="display:none;"
+                                    placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" style="display:none;"
+                                placeholder="-เลือกเมนูทานเล่น-" name="night_fruit" id="night_fruit"
+                                list="morning_fruit_list">
+
+                            <!-- <datalist id="night_fruit_list">
+                                <option value="Boston">
+                                <option value="Cambridge">
+                            </datalist> -->
+                            <div class="col-4">
+
+                                <input name="night_fruit_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="night_fruit_u" style="display:none;"
+                                    placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+
+                            <input class="form-control" type="text" style="display:none;"
+                                placeholder="-เลือกเมนูเครื่องดื่ม-" name="night_bev" id="night_bev"
+                                list="morning_bev_list">
+                            <!-- <datalist id="night_bev_list">
+                                <option value="Boston">
+                                <option value="Cambridge">
+                            </datalist> -->
+                            <div class="col-4">
+
+                                <input name="night_bev_u" type="text" oninput="numberOnly(this.id);"
+                                    class="form-control" id="night_bev_u" style="display:none;"
+                                    placeholder="ยูนิต/จำนวน" value="" maxlength="3" minlength="2" required>
+                            </div>
+                        </div>
+
+
+                        <script>
+                            function opendiv1(val) {
+                                if (val !== '') {
+                                    document.getElementById('noon_food_title').style.display = 'block';
+                                    document.getElementById('noon_food').style.display = 'block';
+                                    document.getElementById('noon_fruit').style.display = 'block';
+                                    document.getElementById('noon_bev').style.display = 'block';
+
+                                    document.getElementById('noon_food_u').style.display = 'block';
+                                    document.getElementById('noon_fruit_u').style.display = 'block';
+                                    document.getElementById('noon_bev_u').style.display = 'block';
+
+
+                                } else {
+                                    document.getElementById('noon_food_title').style.display = 'none';
+                                    document.getElementById('noon_food').style.display = 'none';
+                                    document.getElementById('noon_fruit').style.display = 'none';
+                                    document.getElementById('noon_bev').style.display = 'none';
+
+                                    document.getElementById('noon_food_u').style.display = 'none';
+                                    document.getElementById('noon_fruit_u').style.display = 'none';
+                                    document.getElementById('noon_bev_u').style.display = 'none';
+
+                                }
+                            }
+
+                            function opendiv2(val) {
+                                if (val !== '') {
+                                    document.getElementById('night_food_title').style.display = 'block';
+                                    document.getElementById('night_food').style.display = 'block';
+                                    document.getElementById('night_fruit').style.display = 'block';
+                                    document.getElementById('night_bev').style.display = 'block';
+
+                                    document.getElementById('night_food_u').style.display = 'block';
+                                    document.getElementById('night_fruit_u').style.display = 'block';
+                                    document.getElementById('night_bev_u').style.display = 'block';
+
+
+                                } else {
+                                    document.getElementById('night_food_title').style.display = 'none';
+                                    document.getElementById('night_food').style.display = 'none';
+                                    document.getElementById('night_fruit').style.display = 'none';
+                                    document.getElementById('night_bev').style.display = 'none';
+
+                                    document.getElementById('night_food_u').style.display = 'none';
+                                    document.getElementById('night_fruit_u').style.display = 'none';
+                                    document.getElementById('night_bev_u').style.display = 'none';
+
+                                }
+                            }
+                        </script>
+
+                        <!-- <input name="student_school" type="text" class="form-control" id="student_school"
+                            placeholder="โรงเรียน" value="" required> -->
+
+
+
+                        <div class="mb-4">
+                            <input name="line_userId" style="display:none;" type="text" class="form-control"
+                                id="line_userId" placeholder="" value="" required readonly>
+
+                            <input name="displayName" style="display:none;" type="text" class="form-control"
+                                id="displayName" placeholder="" value="" required readonly>
+                        </div>
+
+                        <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
+
+                        <script>
+                            function runApp() {
+                                liff.getProfile().then(profile => {
+                                    document.getElementById('line_userId').value = profile.userId;
+                                    document.getElementById('displayName').value = profile.displayName;
+                                }).catch(err => console.error(err));
+                            }
+                            liff.init({ liffId: "1657073013-lEmpvQo6" }, () => {
+                                if (liff.isLoggedIn()) {
+                                    runApp()
+                                } else {
+                                    liff.login();
+                                }
+                            }, err => console.error(err.code, error.message));
+
+                        </script>
+
+                        <div class="col-12 p-1">
+                            <button type="submit" class="btn btn-primary" type="button" id="submitButton">
+                                <span id="buttonSpinner" class="spinner-border spinner-border-sm d-none" role="status"
+                                    aria-hidden="true"></span>
+                                <span id="buttonText">Calculate / คำนวณ</span>
+                            </button>
+                        </div>
+                        <div class="col-12 p-1">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </symbol>
+                            </svg>
+                            <div id="unknowError" class="alert alert-danger d-flex align-items-center d-none"
+                                role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img"
+                                    aria-label="Danger:">
+                                    <use xlink:href="#exclamation-triangle-fill" />
+                                </svg>
+                                <div>
+                                    กรุณาลองใหม่อีกครั้ง
+                                </div>
+                            </div>
+                        </div>
+
+                </form>
+            </div>
+
+
+
+
+
+
+
+        </tr>
+    </main>
+    <script src="https://pws.newton.ac.th/Futuristic/calculate.js"></script>
 </body>
 
 </html>
