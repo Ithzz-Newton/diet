@@ -246,11 +246,11 @@
 
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch"
-                                onchange="opendiv1(this.checked)" value="service1" id="service1">
+                                 value="service1" id="service1">
                             <label class="form-check-label" for="service1">ข่าวสาร ข่าวประชาสัมพันธ์</label>
                         </div>
 
-                        <div class="form-check form-switch" style="display:none;" id="service5" >
+                        <div class="form-check form-switch" >
                             <input class="form-check-input" type="checkbox" role="switch"
                                 value="service2" id="service2">
                             <label class="form-check-label" for="service2">แจ้งเตือนเคล็ดลับสุขภาพดี
@@ -278,17 +278,6 @@
                                 id="displayName" placeholder="" value="" required readonly>
                         </div>
 
-                        <script>
-                            function opendiv1(val) {
-                                if (val !== '') {
-                                    document.getElementById('service5').style.display = 'block';
-
-                                } else {
-                                    document.getElementById('service5').style.display = 'none';
-
-                                }
-                            }
-                        </script>
                         <script src="https://static.line-scdn.net/liff/edge/versions/2.9.0/sdk.js"></script>
 
                         <!-- <script>
